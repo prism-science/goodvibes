@@ -200,5 +200,5 @@ def _symmetry_expand(df, images):
         tmp["pbc_shift2"] = pbc_shift2
         result.append(tmp)
 
-    df2 = pd.concat(result, ignore_index=True)
-    return df2.drop_duplicates(ignore_index=True)
+    df2 = pd.concat(result).reset_index()
+    return df2.drop_duplicates(subset=["cra1","cra2","sym_idx1","sym_idx2","pbc_shift1","pbc_shift2"],ignore_index=True)
