@@ -591,3 +591,99 @@ def plot_band_2d_slice(eigs, band_index, h3_fixed=0, outfile=None):
     if outfile:
         plt.savefig(outfile, dpi=300)
     plt.show()
+
+
+def accumulate_sparse_grid_blocks(df_symmetry, body_index, CM, lattice, grid_shape):
+    """
+    Same geometric construction as accumulate_real_space_blocks(), but
+    returns a flat dict instead of scattering into W dense arrays.
+ 
+    Returns dict (w, mu, nu, R) -> (block_L, block_T), each a 6x6 array.
+    R is an (i,j,k) integer index already reduced mod grid_shape.
+    """
+    grid = np.array(grid_shape)
+    sparse = {}
+ 
+    def add(key, bL, bT):
+        if key in sparse:
+            oldL, oldT = sparse[key]
+            sparse[key] = (oldL + bL, oldT + bT)
+        else:
+            sparse[key] = (bL.copy(), bT.copy())
+ 
+    class_ids = df_symmetry['spring_class'].to_numpy()
+    for w, row in zip(class_ids, df_symmetry.itertuples(index=False)):
+        mu = body_index[(row.sym_idx1, row.group_id1)]
+        nu = body_index[(row.sym_idx2, row.group_id2)]
+ 
+        Rvec = np.asarray(row.pbc_shift, dtype=int)
+        Rcart = Rvec @ lattice
+ 
+        r1 = np.asarray(row.r1, dtype=float)
+        r2 = np.asarray(row.r2, dtype=float)
+        dr1 = r1 - CM[mu]
+        dr2 = (r2 - Rcart) - CM[nu]
+ 
+        d = r1 - r2
+        n = d / np.linalg.norm(d)
+        Phi_L = np.outer(n, n)
+        Phi_T = np.eye(3) - Phi_L
+ 
+        T1 = T_matrix(dr1)
+        T2 = T_matrix(dr2)
+ 
+        blk11_L = T1.T @ Phi_L @ T1
+        blk22_L = T2.T @ Phi_L @ T2
+        blk12_L = -T1.T @ Phi_L @ T2
+        blk21_L = blk12_L.T
+ 
+        blk11_T = T1.T @ Phi_T @ T1
+        blk22_T = T2.T @ Phi_T @ T2
+        blk12_T = -T1.T @ Phi_T @ T2
+        blk21_T = blk12_T.T
+ 
+        R0 = (0, 0, 0)
+        Rmod = tuple(Rvec % grid)
+        Rneg = tuple((-Rvec) % grid)
+ 
+        add((w, mu, mu, R0), blk11_L, blk11_T)
+        add((w, nu, nu, R0), blk22_L, blk22_T)
+        add((w, mu, nu, Rmod), blk12_L, blk12_T)
+        add((w, nu, mu, Rneg), blk21_L, blk21_T)
+ 
+    return sparse
+ 
+ 
+def build_D_grid_lowmem(sparse_blocks, kL, kT, L, grid_shape, dtype=np.float64):
+    """
+    Build D(q) on the full grid directly from the sparse cache, using O(1)
+    grid worth of memory instead of O(W). Call this fresh whenever kL/kT
+    change, rather than caching per-class Fourier-space blocks.
+ 
+    L: (M,6,6) Cholesky factors from build_rigid_bodies().
+    dtype: use np.float32 for roughly half the memory of the real-space
+           accumulation step (usually plenty of precision for DOS/band
+           visualization; keep float64 if you need the result for
+           gradient-sensitive refinement math downstream).
+    Returns D_grid: (M,M,N1,N2,N3,6,6) complex128.
+    """
+    M = L.shape[0]
+    N1, N2, N3 = grid_shape
+    Linv = np.linalg.inv(L)
+ 
+    real_combined = np.zeros((M, M, N1, N2, N3, 6, 6), dtype=dtype)
+    for (w, mu, nu, R), (bL, bT) in sparse_blocks.items():
+        real_combined[mu, nu, R[0], R[1], R[2]] += kL[w] * bL + kT[w] * bT
+ 
+    mw = np.einsum('mab,mnijkbc,ndc->mnijkad', Linv, real_combined, Linv,
+                    optimize=True)
+    D_grid = np.fft.fftn(mw, axes=(2, 3, 4))
+    return D_grid
+ 
+ 
+def assemble_Dq(D_grid, h1, h2, h3):
+    """Extract the full 6M x 6M D(q) at a single grid index (h1,h2,h3)."""
+    M = D_grid.shape[0]
+    block = D_grid[:, :, h1, h2, h3, :, :]        # (M,M,6,6)
+    Dq = block.transpose(0, 2, 1, 3).reshape(6 * M, 6 * M)
+    return Dq
