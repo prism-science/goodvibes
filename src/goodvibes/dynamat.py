@@ -4,6 +4,7 @@ import gemmi
 import pandas as pd
 import matplotlib.pyplot as plt
 from collections import defaultdict
+from scipy.ndimage import gaussian_filter1d
 
 """
 Fast construction of the rigid-body dynamical matrix D(q) on a commensurate
@@ -139,7 +140,7 @@ def accumulate_real_space_blocks(df_symmetry, body_index, CM, lattice, grid_shap
     raw_T = defaultdict(lambda: np.zeros((6, 6)))
 
     for row in df_symmetry.itertuples(index=False):
-        w = row.index
+        w = row.spring_class
         mu = body_index[(row.sym_idx1, row.group_id1)]
         nu = body_index[(row.sym_idx2, row.group_id2)]
 
@@ -487,4 +488,106 @@ def plot_bands(bands, xs, ticks, ticklabels, ymin, ymax, breaks=()):
     plt.ylim(ymin, ymax)
     plt.ylabel('Frequency (arb. units)')
     plt.tight_layout()
+    plt.show()
+
+# ----------------------------------------------------------------------
+# DOS and 2D dispersion images, from the full-BZ FFT grid
+# ----------------------------------------------------------------------
+#
+# The path bands sample only a handful of 1D lines through the BZ -- a
+# histogram of those points would badly misrepresent the DOS (it over-weights
+# whatever region the path happens to linger near). A proper DOS needs
+# eigenvalues from a dense, *uniform* sampling of the full 3D BZ, which is
+# exactly what precompute()/build_D_grid() from rigid_body_dynmat.py already
+# gives you on a Born-von Karman-commensurate grid -- reused here rather than
+# looping build_Dq() by hand over a Monkhorst-Pack mesh.
+ 
+def compute_all_eigs_from_grid(D_grid):
+    """
+    D_grid: (M,M,N1,N2,N3,6,6) complex, as returned by build_D_grid().
+ 
+    Returns eigs: (N1,N2,N3,6M) real array of eigenvalues (=omega^2) at
+    every grid q-point, kept in grid shape so 2D slices are easy to pull out.
+    """
+    M, _, N1, N2, N3, _, _ = D_grid.shape
+    n_modes = 6 * M
+    eigs = np.zeros((N1, N2, N3, n_modes))
+    for h1 in range(N1):
+        for h2 in range(N2):
+            for h3 in range(N3):
+                Dq = assemble_Dq(D_grid, h1, h2, h3)
+                Dq = 0.5 * (Dq + Dq.conj().T)  # clean up numerical Hermiticity
+                eigs[h1, h2, h3] = np.linalg.eigvalsh(Dq)
+    return eigs
+ 
+ 
+def compute_dos(eigs, n_bins=400, broaden_bins=2.0):
+    """
+    eigs: any shape ending in n_modes (e.g. (N1,N2,N3,6M)) of D-eigenvalues.
+    Histograms frequencies sqrt(eig) over all grid q-points and bands, then
+    applies a light Gaussian smoothing (in bin units) for a continuous curve.
+ 
+    Returns centers (frequency bin centers), dos (counts, un-normalized --
+    scale by 1/N_q if you want "states per unit cell per unit frequency").
+    """
+    freqs = np.sqrt(np.clip(eigs, 0, None)).ravel()
+    hist, edges = np.histogram(freqs, bins=n_bins)
+    centers = 0.5 * (edges[:-1] + edges[1:])
+    dos = gaussian_filter1d(hist.astype(float), sigma=broaden_bins)
+    return centers, dos
+ 
+ 
+def plot_bands_and_dos(bands, xs, ticks, ticklabels, ymin, ymax, breaks, centers, dos,
+                        outfile=None):
+    """Combined panel: path band structure (left) + full-BZ DOS (right),
+    sharing the frequency axis."""
+    freqs = np.sqrt(np.clip(bands, 0, None))
+    xs_plot, freqs_plot = _insert_breaks(xs, freqs, breaks)
+ 
+    fig, (ax1, ax2) = plt.subplots(
+        1, 2, figsize=(10, 5), sharey=True,
+        gridspec_kw={'width_ratios': [3, 1], 'wspace': 0.05})
+ 
+    for m in range(freqs_plot.shape[1]):
+        ax1.plot(xs_plot, freqs_plot[:, m], color='C0', lw=1)
+    for t in ticks:
+        ax1.axvline(t, color='k', lw=0.5)
+    ax1.set_xticks(ticks)
+    ax1.set_xticklabels(ticklabels)
+    ax1.set_xlim(ticks[0], ticks[-1])
+    ax1.set_ylim(ymin, ymax)
+    ax1.set_ylabel('Frequency (arb. units)')
+ 
+    ax2.plot(dos, centers, color='C1')
+    ax2.fill_betweenx(centers, 0, dos, color='C1', alpha=0.3)
+    ax2.set_xlabel('DOS')
+    ax2.set_xlim(left=0)
+
+    if outfile:
+        plt.savefig(outfile, dpi=300)
+    plt.show()
+ 
+ 
+def plot_band_2d_slice(eigs, band_index, h3_fixed=0, outfile=None):
+    """
+    Image plot of one band's frequency across the (h1,h2) plane at fixed h3
+    -- e.g. h3_fixed=0 gives the qz=0 (Gamma-X-M-Gamma-like) plane.
+ 
+    eigs: (N1,N2,N3,6M) array from compute_all_eigs_from_grid(), already
+    sorted ascending at each q by eigvalsh. NOTE: sorting per-q means a
+    fixed "band index" can jump between physically different branches
+    wherever two bands cross/nearly-cross -- fine for a quick visual, but
+    don't over-interpret sharp features in a single slice as physical without
+    checking neighboring bands too.
+    """
+    freqs = np.sqrt(np.clip(eigs[:, :, h3_fixed, band_index], 0, None))
+    plt.figure(figsize=(5, 5))
+    im = plt.imshow(freqs.T, origin='lower', extent=[0, 1, 0, 1],
+                     aspect='equal', cmap='viridis')
+    plt.colorbar(im, label='Frequency (arb. units)')
+    plt.xlabel(r'$q_1$ (fractional)')
+    plt.ylabel(r'$q_2$ (fractional)')
+    plt.title(f'Band {band_index}, $q_3$ index = {h3_fixed}')
+    if outfile:
+        plt.savefig(outfile, dpi=300)
     plt.show()
