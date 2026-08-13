@@ -1,5 +1,6 @@
 """Elastic Network Model (ENM)"""
 
+import re
 from dataclasses import dataclass
 from functools import cache, lru_cache
 import warnings
@@ -8,11 +9,12 @@ import gemmi
 import pandas as pd
 
 
-def _find_contacts(st, distance_cutoff, include_h=False):
+def _find_contacts(st, distance_cutoff, include_h=False, twice=False):
     max_radius = distance_cutoff + 1.0  # what is optimal here?
     cs = gemmi.ContactSearch(distance_cutoff)
     cs.ignore = gemmi.ContactSearch.Ignore.Nothing
-    cs.twice = True  # True: get both copies for MATLAB-like behavior
+    # cs.twice = True  # True: get two copies of external contacts (by symmetry) for MATLAB-like behavior
+    cs.twice = twice
     ns = gemmi.NeighborSearch(st[0], st.cell, max_radius).populate(include_h=include_h)
     contacts = cs.find_contacts(ns)
     n = len(contacts)
@@ -59,17 +61,102 @@ def _find_contacts(st, distance_cutoff, include_h=False):
     df = df.drop_duplicates(ignore_index=True)
     num_internal_after = num_internal(df)
 
-    if num_internal_before != 2 * num_internal_after:
+    if twice and num_internal_before != 2 * num_internal_after:
         warnings.warn(
             (
                 "Expected duplicate internal contacts to decrease by half, but "
                 f"found {num_internal_before} before and {num_internal_after} after."
                 f"This suggests that {num_internal_before - 2 * num_internal_after} "
                 "contacts were dropped improperly. This is a known bug for very small"
-                "unit cells. Bug your friendly neighborhood developer to fix it!"
+                "unit cells, but might have other causes. Please report this to the developer."
             ),
             RuntimeWarning,
         )
+    elif not twice and num_internal_before != num_internal_after:
+        warnings.warn(
+            (
+                "Expected internal contacts to remain the same when not doubling, but "
+                f"found {num_internal_before} before and {num_internal_after} after."
+                f"This is unexpected! Please report this to the developer."
+            ),
+            RuntimeWarning,
+        )
+
+    return df
+
+
+def _invert_symop(cell_images, sym_idx, pbc_shift):
+    if sym_idx == 0 and pbc_shift == (0, 0, 0):
+        return (0, (0, 0, 0))
+    t = _symop_to_transform(cell_images, sym_idx, pbc_shift)
+    t_inverse = t.inverse()
+    return _transform_to_symop(cell_images, t_inverse)
+
+
+def _symop_to_key(sym_idx, pbc_shift):
+    """Make an expanded key for sorting purposes"""
+    return (
+        abs(pbc_shift[0]) + abs(pbc_shift[1]) + abs(pbc_shift[2]),
+        -1 * (pbc_shift[0] + pbc_shift[1] + pbc_shift[2]),
+        pbc_shift[0],
+        pbc_shift[1],
+        pbc_shift[2],
+        sym_idx,
+    )
+
+
+_cra_pattern = re.compile(r"([^/]+)/([^ ]+) (\d+)/([^\.]+)(?:\.(.*))?")
+
+
+def _cra_to_key(cra):
+    """make a key for sorting based on cra"""
+    # for example; A/LYS 76/CD.A
+    # use regex to split as {chain}/{resname} {resnum}/{atom}.{alt} where .{alt} is optional
+    match = _cra_pattern.match(cra)
+    if not match:
+        raise ValueError(f"Invalid cra format: {cra}")
+    chain, resname, resnum, atom, alt = match.groups()
+    return (chain, int(resnum), resname, atom, alt)
+
+
+def _normalize_asu_contact_order(cell_images, df, inplace=True):
+    # ---- [BEGIN PRE-FLIGHT CHECKS] ----
+
+    # make sure that df has required columns before proceeding
+    required_columns = ["sym_idx2", "pbc_shift2", "cra1", "cra2", "pbc_shift1", "sym_idx1"]
+    missing_columns = [col for col in required_columns if col not in df.columns]
+    if missing_columns:
+        raise ValueError(f"DataFrame is missing required columns: {missing_columns}")
+
+    # check that there are no extra columns with names ending in "1" or "2"
+    extra_columns = [
+        col for col in df.columns if (col.endswith("1") or col.endswith("2")) and col not in required_columns
+    ]
+    if extra_columns:
+        raise ValueError(f"DataFrame has extra columns with names ending in '1' or '2': {extra_columns}")
+
+    # check assumption that pbc_shift1 == (0,0,0) and sym_idx1 == 0
+    if not df.empty and ((df["pbc_shift1"] != (0, 0, 0)).any() or (df["sym_idx1"] != 0).any()):
+        raise ValueError("Unexpected values for pbc_shift1 and sym_idx1: should be (0, 0, 0) and 0 respectively")
+    # ---- [END PRE-FLIGHT CHECKS] ----
+
+    if not inplace:
+        df = df.copy()
+
+    # use itertuples to loop over rows
+    for row in df.itertuples():
+        sym_idx, pbc_shift = _invert_symop(cell_images, row.sym_idx2, row.pbc_shift2)
+        if sym_idx == row.sym_idx2 and pbc_shift == row.pbc_shift2:
+            swap = _cra_to_key(row.cra2) < _cra_to_key(row.cra1)
+        elif _symop_to_key(sym_idx, pbc_shift) < _symop_to_key(row.sym_idx2, row.pbc_shift2):
+            swap = True
+        else:
+            swap = False
+        if swap:
+            df.at[row.Index, "sym_idx2"] = sym_idx
+            df.at[row.Index, "pbc_shift2"] = pbc_shift
+            df.at[row.Index, "cra1"] = row.cra2
+            df.at[row.Index, "cra2"] = row.cra1
 
     return df
 
@@ -134,7 +221,7 @@ def _transform_to_symop(images, t):
         op = im @ t.inverse()
         if _is_identity(op, wrap=True):
             sym_idx = j + 1
-            pbc_shift = (int(op.vec.x), int(op.vec.y), int(op.vec.z))
+            pbc_shift = (-1 * int(op.vec.x), -1 * int(op.vec.y), -1 * int(op.vec.z))
             return sym_idx, pbc_shift
     raise ValueError(f"Symmetry operation not found for transform: {t}")
 
