@@ -119,7 +119,11 @@ def _cra_to_key(cra):
     return (chain, int(resnum), resname, atom, alt)
 
 
-def _normalize_asu_contact_order(cell_images, df, inplace=True):
+def _normalize_asu_contact_order(cell_images, df, inplace=False, sort=True):
+    # sort assumes inplace=False
+    if sort and inplace:
+        raise ValueError("Cannot sort in place; set inplace=False to allow sorting.")
+
     # ---- [BEGIN PRE-FLIGHT CHECKS] ----
 
     # make sure that df has required columns before proceeding
@@ -157,6 +161,15 @@ def _normalize_asu_contact_order(cell_images, df, inplace=True):
             df.at[row.Index, "pbc_shift2"] = pbc_shift
             df.at[row.Index, "cra1"] = row.cra2
             df.at[row.Index, "cra2"] = row.cra1
+
+    if sort:
+        # now, sort the rows using our keys for symop2 and cra1
+        df["_sort_key"] = df.apply(
+            lambda r: (_symop_to_key(r.sym_idx2, r.pbc_shift2), _cra_to_key(r.cra1)),
+            axis=1,
+        )
+
+        df = df.sort_values("_sort_key").drop(columns="_sort_key").reset_index(drop=True)
 
     return df
 
@@ -257,7 +270,7 @@ class _SymmetryImageFinder:
         return sym_idx2, pbc_shift2
 
 
-def _symmetry_expand(df, images):
+def _symmetry_expand(df, images, add_asu_index=False):
     image_finder = _SymmetryImageFinder(tuple(images))
     rows = list(df.itertuples(index=False, name="Row"))
 
@@ -273,6 +286,9 @@ def _symmetry_expand(df, images):
 
         return cra1, cra2, sym_idx1, pbc_shift1, sym_idx2, pbc_shift2
 
+    if add_asu_index:
+        df = df.reset_index(names="asu_index")
+
     result = [df]
     for im_idx in range(len(images)):
         updates = [transform_contact(row, im_idx) for row in rows]
@@ -287,5 +303,7 @@ def _symmetry_expand(df, images):
         tmp["pbc_shift2"] = pbc_shift2
         result.append(tmp)
 
-    df2 = pd.concat(result, ignore_index=True)
-    return df2.drop_duplicates(ignore_index=True)
+    df2 = pd.concat(result).reset_index(drop=True)
+    # is it necessary to ignore asu_index when dropping duplicates?
+    df2 = df2.drop_duplicates(subset=[c for c in df.columns if c not in ["asu_index"]], ignore_index=True)
+    return df2
