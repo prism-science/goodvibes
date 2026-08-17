@@ -90,6 +90,8 @@ def build_rigid_bodies(df_atoms):
         sel = (df_atoms['sym_idx'] == sym_idx) & (df_atoms['group_id'] == group_id)
         sub = df_atoms[sel]
         m = sub['mass'].to_numpy(dtype=float)
+        occ = sub['occupancy'].to_numpy(dtype=float)
+        m = m*occ
         pos = sub[['x', 'y', 'z']].to_numpy(dtype=float)
 
         cm = (m[:, None] * pos).sum(axis=0) / m.sum()
@@ -293,17 +295,21 @@ def build_df_atoms(st, groups):
                 for residue in chain:
                     for atom in residue:
                         v = transform.apply(cell.fractionalize(atom.pos))
-                        pos_new = cell.orthogonalize(gemmi.Fractional(v.x, v.y, v.z))
+                        pos_new = cell.orthogonalize(
+                            gemmi.Fractional(v.x, v.y, v.z)
+                        )
                         rows.append({
                             'sym_idx': sym_idx,
                             'group_id': group_id,
                             'mass': atom.element.weight,
+                            'occupancy': atom.occ,
                             'x': pos_new.x,
                             'y': pos_new.y,
                             'z': pos_new.z,
                             'chain': chain.name,
                             'resnum': residue.seqid.num,
                             'atom_name': atom.name,
+                            'altloc': atom.altloc,
                         })
     return pd.DataFrame(rows)
 
