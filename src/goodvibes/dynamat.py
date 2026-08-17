@@ -77,6 +77,7 @@ def build_rigid_bodies(df_atoms):
     body_index : dict (sym_idx, group_id) -> mu   (mu = 0..M-1)
     CM         : (M, 3) array, center of mass of each body (reference cell)
     L          : (M, 6, 6) array, Cholesky factors (M_gen = L @ L.T) per body
+    Need to fix this to correctly handle alternate conformers.
     """
     keys = sorted(set(zip(df_atoms['sym_idx'], df_atoms['group_id'])))
     body_index = {k: i for i, k in enumerate(keys)}
