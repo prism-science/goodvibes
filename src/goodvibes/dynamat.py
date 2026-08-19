@@ -544,7 +544,7 @@ def compute_dos(eigs, n_bins=400, broaden_bins=2.0):
     return centers, dos
  
  
-def plot_bands_and_dos(bands, xs, ticks, ticklabels, ymin, ymax, breaks, centers, dos, ylabel=None, title=None,
+def plot_bands_and_dos(bands, xs, ticks, ticklabels, ymin, ymax, breaks, centers, dos, dosylow=None, dosyhigh=None, ylabel=None, title=None,
                         outfile=None):
     """Combined panel: path band structure (left) + full-BZ DOS (right),
     sharing the frequency axis."""
@@ -572,7 +572,7 @@ def plot_bands_and_dos(bands, xs, ticks, ticklabels, ymin, ymax, breaks, centers
     ax2.plot(dos, centers, color='C1')
     ax2.fill_betweenx(centers, 0, dos, color='C1', alpha=0.3)
     ax2.set_xlabel('DOS')
-    ax2.set_xlim(left=0)
+    ax2.set_xlim(dosylow,dosyhigh)
 
     if outfile:
         plt.savefig(outfile, dpi=300)
