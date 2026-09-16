@@ -495,6 +495,99 @@ are the stiff and sloppy directions respectively.
 
 ---
 
+## 9b. What the data determines
+
+$K$ is poorly determined, but the data is not uninformative — it is informative
+about different things. The measured quantity is
+
+$$I(\mathbf q)=\mathrm{Tr}\bigl[D(\mathbf q)^{-1}GG^\dagger\bigr]
+=\sum_s\frac{|G\cdot e_s|^2}{\omega_s^2}$$
+
+a single projection of $D^{-1}$ onto one rank-1 direction, weighted as
+$1/\omega^2$.
+
+**Counting.** $D(\mathbf q)$ is $6\times6$ Hermitian: 36 real degrees of freedom.
+One measurement sees one projection. $D$ is periodic in the reciprocal lattice, so
+sampling many Brillouin zones at the same reduced $\mathbf q$ probes those 36 with
+different $GG^\dagger$ — that is where the information must come from. The
+synthetic notebook samples ~280 points over ~128 distinct reduced $\mathbf q$,
+about 2 zones each, so $D(\mathbf q)$ is nowhere near determined pointwise; only
+the 126-parameter model ties the $\mathbf q$-points together.
+
+**Weighting.** A branch three times stiffer contributes nine times less intensity.
+The stiff directions of $K$ are therefore nearly invisible. This is intrinsic to
+thermal diffuse scattering, not a sampling defect.
+
+**Why the ADPs come out well.** $\Sigma=N^{-1}\sum_{\mathbf q}D(\mathbf q)^{-1}$
+carries exactly the same $1/\omega^2$ weighting, integrated over the zone rather
+than projected onto $G$. It is determined about as well as the intensities are.
+This also tempers the ADP comparison in the experimental notebook as an
+independent check: a different functional over different $\mathbf q$, but the same
+soft sector the fit was trained on.
+
+**Why the band structure looks converged.** $\omega(\mathbf q)$ is 6 numbers per
+$\mathbf q$, $D(\mathbf q)$ is 36. Matching eigenvalues is a 6-of-36 compression,
+and matrices related by unitary conjugation share them exactly.
+
+**The degeneracy is in the data, not the model.** In
+$D(\mathbf q)=\sum_{\mathbf n}[A^\dagger KA+K-e^{i\mathbf q\cdot\mathbf R_{\mathbf n}}A^\dagger K-\mathrm{h.c.}]$
+the factors $e^{i\mathbf q\cdot\mathbf R_{\mathbf n}}$ are independent functions of
+$\mathbf q$ for distinct $\mathbf R_{\mathbf n}$, so $K_{\mathbf n}$ is recoverable
+from $D$ known everywhere. Finite, $1/\omega^2$-weighted sampling is what loses it.
+
+**Three measurements of this.** The notebook samples the posterior
+$\theta\sim\mathcal N(\hat\theta,\mathcal C)$,
+$\mathcal C=(J^{\mathsf T}J+\tfrac12\partial^2R/\partial\theta^2)^{-1}$, and
+propagates to the dispersion (with a 95% band and per-branch fractional
+uncertainty), the mean $B$, and the per-contact spread in $K$.
+
+It splits parameter space by the generalized eigendirections of $(F,P)$ — data
+curvature $F=J^{\mathsf T}J$ against prior curvature
+$P=\tfrac12\partial^2R/\partial\theta^2$ — builds two alternative ground truths
+displaced from the prior along the stiff and sloppy subspaces at equal geodesic
+distance, and refits each. A representative result: 42.8% of a stiff-subspace
+displacement recovered against 5.8% of a sloppy one, at $R=0.0105$ vs $0.0096$
+and $CC$ agreeing to five decimals — the intensities cannot tell the two truths
+apart.
+
+And it reads the directions themselves. Three handles:
+
+* **Shrinkage in closed form.** For a Gaussian linear model
+  $\hat\theta=(F+P)^{-1}F\theta_{\rm true}$, so along a generalized
+  eigendirection with $f=F/P$ the recovered fraction is exactly $f/(1+f)$ — no
+  refit needed. Stiff and sloppy is a continuum, not a binary split, and
+  $n_{\rm eff}$ counts $f>1$, i.e. directions recovered *more than half*. A
+  direction just above that cutoff is barely measured, which is why a test
+  perturbation built from all 53 data-dominated directions returned ~43% rather
+  than ~100%: the sum is dominated by the marginal ones.
+* **Where each direction lives in $K$.** Mapping $\delta\theta\to\delta K$ and
+  non-dimensionalizing with the patch gyration radius, each direction decomposes
+  by contact, by block ($TT$, $TR$, $RR$), and into isotropic (overall
+  stiffening) versus deviatoric (change of anisotropy at fixed magnitude) parts.
+* **What each direction does.** The induced fractional change in the acoustic
+  sound speeds near $\Gamma$, the librational rest frequencies, the zone-boundary
+  frequencies, and the mean $B$ — every direction rescaled to the *same geodesic
+  displacement* first, without which the comparison is meaningless, since a
+  unit-norm step in $\theta$ is a different physical perturbation for each
+  direction ($\theta$ holds Cholesky entries running from $\sqrt{K_{TT}}\sim7$ to
+  $\sqrt{K_{RR}}\sim40$).
+
+**Result.** Averaged over the subspaces the split is sharp: data-determined
+directions are $RR\,0.02$, $TR\,0.41$, $TT\,0.57$; prior-carried directions are
+$RR\,0.61$, $TR\,0.36$, $TT\,0.03$. **The diffuse data measures translational
+contact stiffness and barely sees rotational contact stiffness.** Three effects
+compound: $I\propto1/\omega^2$ and the librational branches are the stiff ones; at
+small reduced $\mathbf q$ the acoustic eigenvectors are pure translations, since
+$D(0)$ annihilates exactly the three translations, so the halos couple only
+through $G_T=i\mathbf qF$; and $L(\mathbf q)\to0$ as $\mathbf q\to0$, suppressing
+$G_R$ precisely where the intensity is largest. The $TR$ block sits near 0.4 in
+both, as expected — the contacts are off-centre, so translation–rotation coupling
+mixes librational character into the acoustic branches at finite $\mathbf q$ and
+is partly visible. The stiffest directions concentrate on the largest contact, the
+sloppiest on the smallest.
+
+---
+
 ## 10. Atomic displacement parameters
 
 $$\Sigma=\langle(\Omega,v)(\Omega,v)^{\mathsf T}\rangle
