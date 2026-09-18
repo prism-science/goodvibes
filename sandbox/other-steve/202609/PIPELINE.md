@@ -476,22 +476,75 @@ $K$-space. The held-out scan is the reliable route.
 
 ---
 
-## 9. Sloppiness
+## 9. Sloppiness, and the units problem
 
-126 parameters, and no reason to believe the data constrains 126 independent
-combinations. The Gauss-Newton Hessian $J^{\mathsf T}J$, from the weighted
-Jacobian $J_{ij}=\sqrt{w_i}\,\partial I_i/\partial\theta_j$ at the optimum, answers
-this directly.
+### The Jacobian
 
-For this run **72 of 126** directions sit above a $10^{-6}$ noise floor; the other
-54 are set by the prior. That number is what should be quoted alongside a fitted
-$K$, rather than 126 apparently-measured values. It also gives a principled value
-for `LAMBDA_PRIOR`: place it near the spectrum's noise floor, where it controls
-everything the data does not and nothing it does.
+With $\chi^2=\sum_i w_i(I_i-y_i)^2$ and $w_i=1/\sigma_i^2$, the **standardized
+residual** is $r_i=(I_i-y_i)/\sigma_i$, so $\chi^2=\|r\|^2$ and
 
-The spectrum also explains the asymmetry visible in the band-structure convergence
-movie — acoustic branches lock on quickly, librational ones drift — since those
-are the stiff and sloppy directions respectively.
+$$J_{i\alpha}=\partial r_i/\partial\theta_\alpha=\sqrt{w_i}\,\partial I_i/\partial\theta_\alpha,
+\qquad J^{\mathsf T}J=\tfrac12\,\partial^2\chi^2/\partial\theta^2$$
+
+which is the Fisher information. The $\sqrt w$ is what makes each residual
+dimensionless — measured in units of its own error bar. Weighting by $w$ instead
+gives a matrix with units $\sigma^{-4}(\partial I/\partial\theta)^2$, which is not
+an information and whose inverse is not a covariance. Note $J^{\mathsf T}J$ does
+not involve the data: the sloppy spectrum is a property of the experimental
+design, not of the noise realization.
+
+### Why the raw spectrum is not an invariant
+
+Under $\theta=A\phi$, $J\to JA$ and $J^{\mathsf T}J\to A^{\mathsf T}(J^{\mathsf T}J)A$,
+so its eigenvalues change completely. With parameters carrying different
+dimensions — Cholesky entries of $K_{RR}$ in $\sqrt{k_BT}/\mathrm{rad}$, of
+$K_{TT}$ in $\sqrt{k_BT}/\mathrm{Å}$ — counting eigenvalues above a fraction of
+$\lambda_{\max}$ inherits that arbitrariness. Verified numerically: a random
+linear reparameterization leaves the raw spectrum unrecognizable.
+
+**A metric on parameter space is what makes the question well posed.** For any
+symmetric positive-definite $M$ transforming as $M\to A^{\mathsf T}MA$, the
+generalized eigenvalues of $(J^{\mathsf T}J,M)$ are unchanged by *any* invertible
+reparameterization, since both transform identically — confirmed to $4\times10^{-15}$.
+
+Here $M$ is supplied by the geometry, not chosen. The regularizer is the squared
+affine-invariant geodesic distance, and the Hessian of a squared geodesic distance
+at its base point is twice the Riemannian metric tensor, so
+
+$$M=\frac{1}{2\lambda}\frac{\partial^2R}{\partial\theta^2}$$
+
+is the natural metric on positive-definite stiffness matrices, pulled back to
+$\theta$, independent of $\lambda$ and coordinate-free by construction.
+
+### The invariant spectrum
+
+$$g_i=\text{eig}\bigl(M^{-1}J^{\mathsf T}J\bigr)
+=\frac{\Delta\chi^2}{(\text{geodesic displacement})^2}$$
+
+Dimensionless, reparameterization-invariant, $\lambda$-independent, and directly
+readable: $g_i$ is the $\chi^2$ cost of moving one geodesic unit — a factor of $e$
+in one stiffness eigenvalue of one contact — along direction $i$. Directions with
+$g\gtrsim1$ are measurable; $g\ll1$ is invisible. This gives a **prior-free** count
+$n_{\rm measurable}=\#\{g>1\}$.
+
+The prior enters only as a threshold: posterior precision is
+$J^{\mathsf T}J+\lambda M$, so the recovered fraction is $g_i/(g_i+\lambda)$ and
+changing $\lambda$ slides a cutoff along a *fixed* curve.
+
+### Is anything exactly invisible?
+
+The model has no structural null space: the factors
+$e^{i\mathbf q\cdot\mathbf R_{\mathbf n}}$ are independent functions of $\mathbf q$
+for distinct $\mathbf R_{\mathbf n}$, so $\delta K\neq0$ implies $\delta D\neq0$
+somewhere. But $I$ sees $D$ only through $G^\dagger D^{-1}G$, so a direction is
+invisible *to the experiment* when $\delta D\perp vv^\dagger$ at every sampled
+$\mathbf q$ — a condition on the sampling, not the model.
+
+The synthetic notebook tests this by computing $g$ at the true $K$ with uniform
+weights for increasing numbers of $\mathbf q$-points. Below $N=126$ a null space is
+forced by counting and the rank check confirms it. Above that, whether the small
+$g$ lift with $N$ or saturate distinguishes a sampling limitation from a spectrum
+whose shape is set intrinsically by the $1/\omega^2$ weighting.
 
 ---
 
@@ -718,6 +771,31 @@ $|\mathbf r-\mathbf r_{\rm cm}|^2$) is printed alongside, because a rigid body
 reproduces real $B$ at $r\approx0.4$–$0.6$ from the lever arm alone. $R$ and $CC$
 are reported per resolution shell, so the resolution at which the model stops
 working is measured.
+
+**Choosing where to fit.** Around a reciprocal-lattice point the acoustic branches
+soften as $\omega\propto|\delta\mathbf q|$, so a halo's brightness is set by
+$|\mathbf qF(\mathbf q)|^2$ at its own Bragg position. $|F|$ falls with resolution
+while $|\mathbf q|$ rises, so the product peaks at intermediate resolution, and
+fitting where halos are brightest — the approach of Meisburger, Case & Ando — is
+implemented as the default selection.
+
+It is the right criterion for three reasons. It is a *signal* criterion computed
+from the structure, not from the intensities being fitted, so unlike an SNR cut it
+cannot select on a favourable noise realization. It targets exactly the coupling
+that carries the information: the sloppiness analysis shows the data constrains
+translational contact stiffness through the acoustic branches, and $G_T=i\mathbf qF$
+*is* the acoustic coupling, since at small $\delta\mathbf q$ the acoustic
+eigenvectors are pure translations and $G_R$ does not enter at leading order. And
+it self-limits at both ends — low $q$ where the contrast density suppresses $F$,
+high $q$ where form-factor decay and Debye–Waller have killed it.
+
+Two refinements over a plain shell cut: reciprocal-lattice points are ranked
+**individually** by $|\mathbf qF|^2$ rather than by shell, because $|F|$ varies by
+orders of magnitude between neighbouring reflections at the same $d$ (a shell cut
+keeps dim halos and drops bright ones); and a hard ceiling `D_MODEL_MIN` is
+retained, because the coupling criterion is about signal, not model validity. If
+the $|\mathbf qF|^2$ peak lies beyond the ceiling the two disagree, the ceiling
+wins, and the cell says so.
 
 **Not yet included.** An additive non-lattice background. The deposited map still
 contains solvent scattering and short-range internal motion, which a
