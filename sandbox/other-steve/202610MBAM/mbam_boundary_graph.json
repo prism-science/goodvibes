@@ -1,0 +1,4081 @@
+{
+ "nodes": [
+  {
+   "id": "0.0",
+   "t": 0,
+   "k": 0,
+   "p": 126,
+   "chi2": 100.11425017377564,
+   "action": "start",
+   "what": "full model",
+   "kept": true,
+   "tau": 0.0,
+   "note": "",
+   "face": "0.0",
+   "on_path": true,
+   "short": "full model"
+  },
+  {
+   "id": "1.0",
+   "t": 1,
+   "k": 0,
+   "p": 125,
+   "chi2": 100.11424934939475,
+   "kept": true,
+   "action": "direct",
+   "what": "(0, -1, 1) releases relative rotation+translation (tilt, shear; rot. weight 0.71)",
+   "tau": 0.0,
+   "note": "",
+   "face": "1.0",
+   "on_path": true,
+   "short": "(0,-1,1) R r+t +"
+  },
+  {
+   "id": "2.0",
+   "t": 2,
+   "k": 0,
+   "p": 123,
+   "chi2": 100.11424870297267,
+   "kept": true,
+   "action": "direct",
+   "what": "(0, -1, 1) releases relative rotation+translation (tilt, shear; rot. weight 0.78)",
+   "tau": 0.0,
+   "note": "",
+   "face": "2.0",
+   "on_path": true,
+   "short": "(0,-1,1) R r+t +"
+  },
+  {
+   "id": "3.0",
+   "t": 3,
+   "k": 0,
+   "p": 122,
+   "chi2": 100.11424808564223,
+   "kept": true,
+   "action": "direct",
+   "what": "(-1, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.60)",
+   "tau": 0.0,
+   "note": "",
+   "face": "3.0",
+   "on_path": true,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "4.0",
+   "t": 4,
+   "k": 0,
+   "p": 121,
+   "chi2": 100.11424750464515,
+   "kept": true,
+   "action": "direct",
+   "what": "(0, -1, 0) releases relative rotation+translation (twist, shear; rot. weight 0.44)",
+   "tau": 0.0,
+   "note": "",
+   "face": "4.0",
+   "on_path": true,
+   "short": "(0,-1,0) R r+t +"
+  },
+  {
+   "id": "5.0",
+   "t": 5,
+   "k": 0,
+   "p": 120,
+   "chi2": 100.1142469448038,
+   "kept": true,
+   "action": "direct",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.70)",
+   "tau": 0.0,
+   "note": "",
+   "face": "5.0",
+   "on_path": true,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "6.0",
+   "t": 6,
+   "k": 0,
+   "p": 119,
+   "chi2": 100.11424625190044,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 8e-15 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "6.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "7.0",
+   "t": 7,
+   "k": 0,
+   "p": 118,
+   "chi2": 100.11424591671269,
+   "kept": true,
+   "action": "direct",
+   "what": "(-1, 0, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.65)",
+   "tau": 0.0,
+   "note": "",
+   "face": "7.0",
+   "on_path": true,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "8.0",
+   "t": 8,
+   "k": 0,
+   "p": 113,
+   "chi2": 100.11429318055846,
+   "kept": true,
+   "action": "mixed",
+   "what": "(0, -1, 0) releases relative rotation (tilt; rot. weight 0.85)",
+   "tau": 0.0018462121693991608,
+   "note": "",
+   "face": "8.0",
+   "on_path": true,
+   "short": "(0,-1,0) R rot +"
+  },
+  {
+   "id": "8.c1",
+   "t": 8,
+   "k": null,
+   "p": 113,
+   "chi2": 100.11429319675688,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 0.0017928620934663357,
+   "note": "",
+   "face": "8.0",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "9.0",
+   "t": 9,
+   "k": 0,
+   "p": 112,
+   "chi2": 100.14313641299069,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, -1, 0) releases relative translation (shear; rot. weight 0.16)",
+   "tau": 0.50378274334487,
+   "note": "",
+   "face": "9.0",
+   "on_path": true,
+   "short": "(-1,-1,0) R trans +"
+  },
+  {
+   "id": "9.c1",
+   "t": 9,
+   "k": null,
+   "p": 112,
+   "chi2": 100.14313641557499,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 0.5959735129724953,
+   "note": "",
+   "face": "9.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "9.c2",
+   "t": 9,
+   "k": null,
+   "p": 112,
+   "chi2": 100.14313641822147,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 1.659131493076767,
+   "note": "",
+   "face": "9.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "9.c3",
+   "t": 9,
+   "k": null,
+   "p": 112,
+   "chi2": 100.14313642355567,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 0.15765541863741228,
+   "note": "",
+   "face": "9.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "9.1",
+   "t": 9,
+   "k": 1,
+   "p": 112,
+   "chi2": 100.35433664219723,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, -1, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.31)",
+   "tau": 0.8414093579132621,
+   "note": "",
+   "face": "9.1",
+   "on_path": false,
+   "short": "(-1,-1,0) R r+t +"
+  },
+  {
+   "id": "10.0",
+   "t": 10,
+   "k": 0,
+   "p": 110,
+   "chi2": 100.53684885587329,
+   "kept": true,
+   "action": "mixed",
+   "what": "(-1, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.37)",
+   "tau": 37.48649690293957,
+   "note": "",
+   "face": "10.0",
+   "on_path": false,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "10.1",
+   "t": 10,
+   "k": 1,
+   "p": 110,
+   "chi2": 100.60187247900885,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative rotation+translation (twist, normal; rot. weight 0.47)",
+   "tau": 39.389268725180784,
+   "note": "",
+   "face": "10.1",
+   "on_path": true,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "10.c2",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.60334191947553,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 12.454175514117152,
+   "note": "",
+   "face": "10.1",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "10.c3",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.6093263553126,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 42.08760229198255,
+   "note": "",
+   "face": "10.c3",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "10.c4",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.6148184228868,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 47.180098426113105,
+   "note": "",
+   "face": "10.c3",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "10.c5",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.62256240446796,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 7.286659447716109,
+   "note": "",
+   "face": "10.c3",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "10.c6",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.7085674649507,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) release",
+   "tau": 13.82263270496104,
+   "note": "",
+   "face": "10.c6",
+   "on_path": false,
+   "short": "(-1,0,0) R"
+  },
+  {
+   "id": "10.c7",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.70856746750303,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) release",
+   "tau": 14.103705476966027,
+   "note": "",
+   "face": "10.c6",
+   "on_path": false,
+   "short": "(-1,0,0) R"
+  },
+  {
+   "id": "10.c8",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.70886977062852,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) release",
+   "tau": 17.191095558679315,
+   "note": "",
+   "face": "10.c6",
+   "on_path": false,
+   "short": "(-1,0,0) R"
+  },
+  {
+   "id": "10.c9",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.79429530078933,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) release",
+   "tau": 12.452088569048312,
+   "note": "",
+   "face": "10.c9",
+   "on_path": false,
+   "short": "(-1,0,0) R"
+  },
+  {
+   "id": "10.c10",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.86020118796732,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 17.136032053867606,
+   "note": "",
+   "face": "10.c10",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "10.c11",
+   "t": 10,
+   "k": null,
+   "p": 110,
+   "chi2": 100.86063683711936,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 13.967904449826126,
+   "note": "",
+   "face": "10.c10",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "11.0",
+   "t": 11,
+   "k": 0,
+   "p": 108,
+   "chi2": 100.91358738077216,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.54)",
+   "tau": 18.430368945002517,
+   "note": "",
+   "face": "11.0",
+   "on_path": true,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "11.c1",
+   "t": 11,
+   "k": null,
+   "p": 108,
+   "chi2": 100.91359562909074,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) release",
+   "tau": 24.648072612678124,
+   "note": "",
+   "face": "11.0",
+   "on_path": false,
+   "short": "(-1,0,0) R"
+  },
+  {
+   "id": "11.1",
+   "t": 11,
+   "k": 1,
+   "p": 108,
+   "chi2": 100.91365120554977,
+   "kept": true,
+   "action": "mixed",
+   "what": "(-1, 0, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.29)",
+   "tau": 13.19246726256618,
+   "note": "",
+   "face": "11.1",
+   "on_path": false,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "11.c3",
+   "t": 11,
+   "k": null,
+   "p": 108,
+   "chi2": 101.28786280729521,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 46.26445120972519,
+   "note": "",
+   "face": "11.c3",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "11.c4",
+   "t": 11,
+   "k": null,
+   "p": 108,
+   "chi2": 101.28845409281494,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 26.249107190170925,
+   "note": "",
+   "face": "11.c3",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "12.0",
+   "t": 12,
+   "k": 0,
+   "p": 106,
+   "chi2": 101.88126533783284,
+   "kept": true,
+   "action": "single",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.49)",
+   "tau": 30.116764820782606,
+   "note": "",
+   "face": "12.0",
+   "on_path": false,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "12.1",
+   "t": 12,
+   "k": 1,
+   "p": 107,
+   "chi2": 100.91358737535495,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.00015 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "12.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "13.0",
+   "t": 13,
+   "k": 0,
+   "p": 104,
+   "chi2": 102.19374413590685,
+   "kept": true,
+   "action": "mixed",
+   "what": "(-1, -1, 0) releases relative rotation+translation (twist, shear; rot. weight 0.35)",
+   "tau": 66.4984808349976,
+   "note": "",
+   "face": "13.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R r+t +"
+  },
+  {
+   "id": "13.1",
+   "t": 13,
+   "k": 1,
+   "p": 105,
+   "chi2": 101.48535432076983,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, -1, 0) releases relative rotation (tilt; rot. weight 0.92)",
+   "tau": 49.72640873548825,
+   "note": "",
+   "face": "13.1",
+   "on_path": true,
+   "short": "(-1,-1,0) R rot +"
+  },
+  {
+   "id": "13.c2",
+   "t": 13,
+   "k": null,
+   "p": 105,
+   "chi2": 101.49275991770433,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 18.758848567566496,
+   "note": "",
+   "face": "13.1",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "13.c3",
+   "t": 13,
+   "k": null,
+   "p": 105,
+   "chi2": 101.87605263750685,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 16.934180026577828,
+   "note": "",
+   "face": "13.c3",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "13.c4",
+   "t": 13,
+   "k": null,
+   "p": 105,
+   "chi2": 101.88670407794466,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 43.74247609426793,
+   "note": "",
+   "face": "13.c4",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "13.c5",
+   "t": 13,
+   "k": null,
+   "p": 105,
+   "chi2": 101.88723700837524,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 63.25675526634278,
+   "note": "",
+   "face": "13.c4",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "14.0",
+   "t": 14,
+   "k": 0,
+   "p": 103,
+   "chi2": 102.19374413558427,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.00054 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "14.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "14.1",
+   "t": 14,
+   "k": 1,
+   "p": 104,
+   "chi2": 101.48535431974142,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.0015 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "14.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "15.0",
+   "t": 15,
+   "k": 0,
+   "p": 100,
+   "chi2": 104.53518629757086,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 1) releases relative translation (shear; rot. weight 0.17)",
+   "tau": 65.6644039028535,
+   "note": "",
+   "face": "15.0",
+   "on_path": false,
+   "short": "(0,-1,1) R trans +"
+  },
+  {
+   "id": "15.1",
+   "t": 15,
+   "k": 1,
+   "p": 100,
+   "chi2": 104.72513192491124,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 1) releases relative rotation+translation (tilt, normal; rot. weight 0.28)",
+   "tau": 18.273521286628316,
+   "note": "",
+   "face": "15.1",
+   "on_path": true,
+   "short": "(0,-1,1) R r+t +"
+  },
+  {
+   "id": "15.c2",
+   "t": 15,
+   "k": null,
+   "p": 100,
+   "chi2": 104.87362156250222,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 25.939234470135695,
+   "note": "",
+   "face": "15.c2",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "15.c3",
+   "t": 15,
+   "k": null,
+   "p": 100,
+   "chi2": 104.87979925953532,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 17.340094970055947,
+   "note": "",
+   "face": "15.c3",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "15.c4",
+   "t": 15,
+   "k": null,
+   "p": 100,
+   "chi2": 104.89356352779184,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 25.99050248474353,
+   "note": "",
+   "face": "15.c4",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "15.c5",
+   "t": 15,
+   "k": null,
+   "p": 100,
+   "chi2": 105.00487888392426,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 35.6388642678732,
+   "note": "",
+   "face": "15.c5",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "15.c6",
+   "t": 15,
+   "k": null,
+   "p": 102,
+   "chi2": 102.19374413557486,
+   "kept": false,
+   "action": "candidate",
+   "what": "orientation direction with g = 0.0052 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "15.c6",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "16.0",
+   "t": 16,
+   "k": 0,
+   "p": 98,
+   "chi2": 105.35446874420487,
+   "kept": true,
+   "action": "mixed",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.60)",
+   "tau": 4.117898509261961,
+   "note": "",
+   "face": "16.0",
+   "on_path": false,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "16.c1",
+   "t": 16,
+   "k": null,
+   "p": 98,
+   "chi2": 105.35446874542632,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 4.368589165935464,
+   "note": "",
+   "face": "16.0",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "16.1",
+   "t": 16,
+   "k": 1,
+   "p": 98,
+   "chi2": 106.41762203933818,
+   "kept": true,
+   "action": "single",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.67)",
+   "tau": 109.56131443118021,
+   "note": "",
+   "face": "16.1",
+   "on_path": true,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "16.c3",
+   "t": 16,
+   "k": null,
+   "p": 99,
+   "chi2": 5267.255291028716,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) lock",
+   "tau": 93.21178790490549,
+   "note": "",
+   "face": "16.c3",
+   "on_path": false,
+   "short": "(-1,0,-1) L"
+  },
+  {
+   "id": "17.0",
+   "t": 17,
+   "k": 0,
+   "p": 97,
+   "chi2": 105.35446874409992,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.021 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "17.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "17.1",
+   "t": 17,
+   "k": 1,
+   "p": 97,
+   "chi2": 106.417622039226,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.0014 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "17.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "18.0",
+   "t": 18,
+   "k": 0,
+   "p": 96,
+   "chi2": 105.35446874409448,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.055 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "18.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "18.1",
+   "t": 18,
+   "k": 1,
+   "p": 96,
+   "chi2": 106.41762203922497,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.0069 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "18.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "19.0",
+   "t": 19,
+   "k": 0,
+   "p": 95,
+   "chi2": 106.41762203922485,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.013 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "19.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "19.1",
+   "t": 19,
+   "k": 1,
+   "p": 93,
+   "chi2": 124.5693829424385,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.80)",
+   "tau": 14.157693940350581,
+   "note": "",
+   "face": "19.1",
+   "on_path": false,
+   "short": "(0,-1,0) R r+t +"
+  },
+  {
+   "id": "19.c2",
+   "t": 19,
+   "k": null,
+   "p": 93,
+   "chi2": 125.86835298275636,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 53.25043921476265,
+   "note": "",
+   "face": "19.c2",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "19.c3",
+   "t": 19,
+   "k": null,
+   "p": 93,
+   "chi2": 131.64123230169918,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 31.364390502589853,
+   "note": "",
+   "face": "19.c3",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "19.c4",
+   "t": 19,
+   "k": null,
+   "p": 93,
+   "chi2": 137.34446091751266,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 30.81234832232325,
+   "note": "",
+   "face": "19.c4",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "20.0",
+   "t": 20,
+   "k": 0,
+   "p": 94,
+   "chi2": 106.41762203922468,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.038 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "20.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "20.1",
+   "t": 20,
+   "k": 1,
+   "p": 90,
+   "chi2": 129.7763824154669,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, -1) releases relative rotation+translation (tilt, normal; rot. weight 0.57)",
+   "tau": 0.0,
+   "note": "",
+   "face": "20.1",
+   "on_path": false,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "21.0",
+   "t": 21,
+   "k": 0,
+   "p": 87,
+   "chi2": 138.8197646736631,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, -1, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.31)",
+   "tau": 0.0,
+   "note": "",
+   "face": "21.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R r+t +"
+  },
+  {
+   "id": "21.1",
+   "t": 21,
+   "k": 1,
+   "p": 91,
+   "chi2": 142.21794301232975,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.68)",
+   "tau": 18.9569252732777,
+   "note": "",
+   "face": "21.1",
+   "on_path": true,
+   "short": "(0,-1,0) R r+t +"
+  },
+  {
+   "id": "21.c2",
+   "t": 21,
+   "k": null,
+   "p": 91,
+   "chi2": 146.79040814637798,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 16.704354516218647,
+   "note": "",
+   "face": "21.c2",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "21.c3",
+   "t": 21,
+   "k": null,
+   "p": 91,
+   "chi2": 246.09277467748905,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 29.245394232811122,
+   "note": "",
+   "face": "21.c3",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "21.c4",
+   "t": 21,
+   "k": null,
+   "p": 91,
+   "chi2": 261.1112802751426,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 26.46322651757134,
+   "note": "",
+   "face": "21.c4",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "22.0",
+   "t": 22,
+   "k": 0,
+   "p": 84,
+   "chi2": 150.6521737214659,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.48)",
+   "tau": 0.0,
+   "note": "",
+   "face": "22.0",
+   "on_path": false,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "22.1",
+   "t": 22,
+   "k": 1,
+   "p": 90,
+   "chi2": 142.2179430102331,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.13 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "22.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "23.0",
+   "t": 23,
+   "k": 0,
+   "p": 89,
+   "chi2": 142.21794301015706,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.2 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "23.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "23.1",
+   "t": 23,
+   "k": 1,
+   "p": 80,
+   "chi2": 177.69023355936548,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation+translation (twist, shear; rot. weight 0.74)",
+   "tau": 0.0,
+   "note": "",
+   "face": "23.1",
+   "on_path": false,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "24.0",
+   "t": 24,
+   "k": 0,
+   "p": 86,
+   "chi2": 162.21033561911236,
+   "kept": true,
+   "action": "mixed",
+   "what": "(-1, 0, 0) releases relative rotation (tilt; rot. weight 0.96)",
+   "tau": 79.58754625874666,
+   "note": "",
+   "face": "24.0",
+   "on_path": true,
+   "short": "(-1,0,0) R rot +"
+  },
+  {
+   "id": "24.1",
+   "t": 24,
+   "k": 1,
+   "p": 79,
+   "chi2": 177.6902335558207,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.55 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "24.1",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "25.0",
+   "t": 25,
+   "k": 0,
+   "p": 85,
+   "chi2": 162.2103356148108,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.18 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "25.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "25.1",
+   "t": 25,
+   "k": 1,
+   "p": 74,
+   "chi2": 300.07239743954574,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 1) releases relative rotation (tilt; rot. weight 0.99)",
+   "tau": 95.70586248481979,
+   "note": "",
+   "face": "25.1",
+   "on_path": false,
+   "short": "(0,-1,1) R rot +"
+  },
+  {
+   "id": "25.c2",
+   "t": 25,
+   "k": null,
+   "p": 74,
+   "chi2": 325.1717391387947,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 54.77184721954894,
+   "note": "",
+   "face": "25.c2",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "26.0",
+   "t": 26,
+   "k": 0,
+   "p": 82,
+   "chi2": 163.12856550340342,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative translation (shear; rot. weight 0.10)",
+   "tau": 44.71265631203074,
+   "note": "",
+   "face": "26.0",
+   "on_path": true,
+   "short": "(-1,0,-1) R trans +"
+  },
+  {
+   "id": "26.1",
+   "t": 26,
+   "k": 1,
+   "p": 82,
+   "chi2": 164.44709417984043,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative translation (shear; rot. weight 0.02)",
+   "tau": 37.238350169448914,
+   "note": "",
+   "face": "26.1",
+   "on_path": false,
+   "short": "(-1,0,-1) R trans +"
+  },
+  {
+   "id": "26.c2",
+   "t": 26,
+   "k": null,
+   "p": 82,
+   "chi2": 164.6369425463016,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 39.21399870973021,
+   "note": "",
+   "face": "26.c2",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "26.c3",
+   "t": 26,
+   "k": null,
+   "p": 82,
+   "chi2": 165.10545148534976,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 49.9500598828024,
+   "note": "",
+   "face": "26.c3",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "26.c4",
+   "t": 26,
+   "k": null,
+   "p": 82,
+   "chi2": 165.41366113126483,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 44.48629947847417,
+   "note": "",
+   "face": "26.c4",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "26.c5",
+   "t": 26,
+   "k": null,
+   "p": 82,
+   "chi2": 166.68916970521482,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 17.448992560141495,
+   "note": "",
+   "face": "26.c5",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "26.c6",
+   "t": 26,
+   "k": null,
+   "p": 82,
+   "chi2": 167.2267036853191,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 18.35057104643792,
+   "note": "",
+   "face": "26.c6",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "26.c7",
+   "t": 26,
+   "k": null,
+   "p": 82,
+   "chi2": 168.00510753654936,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 52.95610901518876,
+   "note": "",
+   "face": "26.c7",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "26.c8",
+   "t": 26,
+   "k": null,
+   "p": 72,
+   "chi2": 364.6864217979875,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) releases relative rotation+translation (tilt, normal; rot. weight 0.23)",
+   "tau": 0.0,
+   "note": "",
+   "face": "26.c8",
+   "on_path": false,
+   "short": "(0,-1,1) R r+t +"
+  },
+  {
+   "id": "27.0",
+   "t": 27,
+   "k": 0,
+   "p": 81,
+   "chi2": 163.12856549342092,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.68 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "27.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "27.1",
+   "t": 27,
+   "k": 1,
+   "p": 81,
+   "chi2": 164.4470941745232,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.35 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "27.1",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "28.0",
+   "t": 28,
+   "k": 0,
+   "p": 77,
+   "chi2": 227.46908571377384,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative translation (shear; rot. weight 0.07)",
+   "tau": 22.91433264546257,
+   "note": "",
+   "face": "28.0",
+   "on_path": true,
+   "short": "(-1,0,-1) R trans +"
+  },
+  {
+   "id": "28.1",
+   "t": 28,
+   "k": 1,
+   "p": 77,
+   "chi2": 231.39420720057183,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.31)",
+   "tau": 38.0016716674759,
+   "note": "",
+   "face": "28.1",
+   "on_path": false,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "28.c2",
+   "t": 28,
+   "k": null,
+   "p": 77,
+   "chi2": 243.10233176564964,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 33.98593772721652,
+   "note": "",
+   "face": "28.c2",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "28.c3",
+   "t": 28,
+   "k": null,
+   "p": 76,
+   "chi2": 274.04239110496684,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 98.07006335402704,
+   "note": "",
+   "face": "28.c3",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "28.c4",
+   "t": 28,
+   "k": null,
+   "p": 77,
+   "chi2": 301.83222561988396,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 37.32302916704871,
+   "note": "",
+   "face": "28.c4",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "28.c5",
+   "t": 28,
+   "k": null,
+   "p": 77,
+   "chi2": 307.1227365370196,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 35.39619059710833,
+   "note": "",
+   "face": "28.c5",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "29.0",
+   "t": 29,
+   "k": 0,
+   "p": 76,
+   "chi2": 227.46908570902403,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.51 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "29.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "29.1",
+   "t": 29,
+   "k": 1,
+   "p": 74,
+   "chi2": 322.7359926710683,
+   "kept": true,
+   "action": "mixed",
+   "what": "(0, 0, -1) releases relative rotation+translation (twist, shear; rot. weight 0.39)",
+   "tau": 444.0676731530454,
+   "note": "",
+   "face": "29.1",
+   "on_path": false,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "29.c2",
+   "t": 29,
+   "k": null,
+   "p": 73,
+   "chi2": 1026.0681886138943,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 342.861184675741,
+   "note": "",
+   "face": "29.c2",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "29.c3",
+   "t": 29,
+   "k": null,
+   "p": 73,
+   "chi2": 1046.2805305595452,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 488.4252101374917,
+   "note": "",
+   "face": "29.c3",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "29.c4",
+   "t": 29,
+   "k": null,
+   "p": 73,
+   "chi2": 1161.1903393454938,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 287.06683784313753,
+   "note": "",
+   "face": "29.c4",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "30.0",
+   "t": 30,
+   "k": 0,
+   "p": 75,
+   "chi2": 227.46908570869925,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.9 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "30.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "30.1",
+   "t": 30,
+   "k": 1,
+   "p": 73,
+   "chi2": 322.73599266340705,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.68 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "30.1",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "31.0",
+   "t": 31,
+   "k": 0,
+   "p": 72,
+   "chi2": 277.5600649197386,
+   "kept": true,
+   "action": "single",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, normal; rot. weight 0.64)",
+   "tau": 25.292762803577983,
+   "note": "",
+   "face": "31.0",
+   "on_path": false,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "31.1",
+   "t": 31,
+   "k": 1,
+   "p": 72,
+   "chi2": 298.9808005417898,
+   "kept": true,
+   "action": "single",
+   "what": "(0, 0, -1) releases relative rotation+translation (twist, shear; rot. weight 0.41)",
+   "tau": 30.16989923725344,
+   "note": "",
+   "face": "31.1",
+   "on_path": true,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "31.c2",
+   "t": 31,
+   "k": null,
+   "p": 72,
+   "chi2": 312.5906743649115,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 32.875356754429006,
+   "note": "",
+   "face": "31.c2",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "31.c3",
+   "t": 31,
+   "k": null,
+   "p": 72,
+   "chi2": 323.2065333731182,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 52.89291139957132,
+   "note": "",
+   "face": "31.c3",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "31.c4",
+   "t": 31,
+   "k": null,
+   "p": 70,
+   "chi2": 327.76014492988,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 151.2594578185989,
+   "note": "",
+   "face": "31.c4",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "31.c5",
+   "t": 31,
+   "k": null,
+   "p": 72,
+   "chi2": 396.08479887840554,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, 0, -1) release",
+   "tau": 72.13872588875977,
+   "note": "",
+   "face": "31.c5",
+   "on_path": false,
+   "short": "(0,0,-1) R"
+  },
+  {
+   "id": "31.c6",
+   "t": 31,
+   "k": null,
+   "p": 69,
+   "chi2": 1005.7443491096295,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 315.84763831126793,
+   "note": "",
+   "face": "31.c6",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "31.c7",
+   "t": 31,
+   "k": null,
+   "p": 69,
+   "chi2": 1345.447417086038,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 172.06921651139686,
+   "note": "",
+   "face": "31.c7",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "31.c8",
+   "t": 31,
+   "k": null,
+   "p": 69,
+   "chi2": 1932.4538609445437,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 182.78414522723557,
+   "note": "",
+   "face": "31.c8",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "32.0",
+   "t": 32,
+   "k": 0,
+   "p": 71,
+   "chi2": 298.9808005011207,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.77 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "32.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "32.1",
+   "t": 32,
+   "k": 1,
+   "p": 69,
+   "chi2": 393.1487147516341,
+   "kept": true,
+   "action": "mixed",
+   "what": "(-1, -1, 0) releases relative rotation+translation (twist, shear; rot. weight 0.28)",
+   "tau": 331.2134650368384,
+   "note": "",
+   "face": "32.1",
+   "on_path": false,
+   "short": "(-1,-1,0) R r+t +"
+  },
+  {
+   "id": "32.c2",
+   "t": 32,
+   "k": null,
+   "p": 68,
+   "chi2": 1190.545733346471,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 570.1109943921241,
+   "note": "",
+   "face": "32.c2",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "32.c3",
+   "t": 32,
+   "k": null,
+   "p": 68,
+   "chi2": 1424.7494136987666,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 300.01528360406076,
+   "note": "",
+   "face": "32.c3",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "32.c4",
+   "t": 32,
+   "k": null,
+   "p": 68,
+   "chi2": 1665.0686022766042,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 249.3442558592917,
+   "note": "",
+   "face": "32.c4",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "33.0",
+   "t": 33,
+   "k": 0,
+   "p": 68,
+   "chi2": 307.145596064183,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, -1, 0) releases relative rotation (twist; rot. weight 0.98)",
+   "tau": 3.5162702870031106,
+   "note": "",
+   "face": "33.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R rot +"
+  },
+  {
+   "id": "33.1",
+   "t": 33,
+   "k": 1,
+   "p": 68,
+   "chi2": 309.8511102335362,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, -1, 0) releases relative rotation (twist; rot. weight 0.94)",
+   "tau": 10.02735134945676,
+   "note": "",
+   "face": "33.1",
+   "on_path": true,
+   "short": "(-1,-1,0) R rot +"
+  },
+  {
+   "id": "33.c2",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 311.64095666052395,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 15.114910846987925,
+   "note": "",
+   "face": "33.c2",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "33.c3",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 314.09817772665747,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 13.341654190128649,
+   "note": "",
+   "face": "33.c3",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "33.c4",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 315.0797293346805,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 14.265340842723504,
+   "note": "",
+   "face": "33.c4",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "33.c5",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 333.04741311649366,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 25.17000465915264,
+   "note": "",
+   "face": "33.c5",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "33.c6",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 417.81528073090135,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 56.11502018601691,
+   "note": "",
+   "face": "33.c6",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "33.c7",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 421.2279922443169,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 86.73468571547848,
+   "note": "",
+   "face": "33.c7",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "33.c8",
+   "t": 33,
+   "k": null,
+   "p": 64,
+   "chi2": 476.707044464869,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) release",
+   "tau": 312.40931209575535,
+   "note": "",
+   "face": "33.c8",
+   "on_path": false,
+   "short": "(0,-1,1) R"
+  },
+  {
+   "id": "33.c9",
+   "t": 33,
+   "k": null,
+   "p": 65,
+   "chi2": 1069.3391957097133,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 288.4055130460778,
+   "note": "",
+   "face": "33.c9",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "33.c10",
+   "t": 33,
+   "k": null,
+   "p": 65,
+   "chi2": 1176.1273311285438,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 394.2724980356523,
+   "note": "",
+   "face": "33.c10",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "33.c11",
+   "t": 33,
+   "k": null,
+   "p": 68,
+   "chi2": 3443.246302665061,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) lock",
+   "tau": 535.09261079099,
+   "note": "",
+   "face": "33.c11",
+   "on_path": false,
+   "short": "(-1,-1,0) L"
+  },
+  {
+   "id": "34.0",
+   "t": 34,
+   "k": 0,
+   "p": 64,
+   "chi2": 1271.1257477893266,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 0) releases relative rotation+translation (twist, normal; rot. weight 0.75)",
+   "tau": 548.274439500574,
+   "note": "",
+   "face": "34.0",
+   "on_path": true,
+   "short": "(0,-1,0) R r+t +"
+  },
+  {
+   "id": "34.1",
+   "t": 34,
+   "k": 1,
+   "p": 64,
+   "chi2": 1455.5554770574745,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 0) releases relative rotation (tilt; rot. weight 0.95)",
+   "tau": 467.0108012659484,
+   "note": "",
+   "face": "34.1",
+   "on_path": false,
+   "short": "(0,-1,0) R rot +"
+  },
+  {
+   "id": "34.c2",
+   "t": 34,
+   "k": null,
+   "p": 64,
+   "chi2": 1540.9618418657974,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 462.17550756779644,
+   "note": "",
+   "face": "34.c2",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "34.c3",
+   "t": 34,
+   "k": null,
+   "p": 64,
+   "chi2": 1578.8023288436032,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 157.06697630848646,
+   "note": "",
+   "face": "34.c3",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "34.c4",
+   "t": 34,
+   "k": null,
+   "p": 64,
+   "chi2": 1792.8099603324308,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) release",
+   "tau": 398.80091607566345,
+   "note": "",
+   "face": "34.c4",
+   "on_path": false,
+   "short": "(0,-1,0) R"
+  },
+  {
+   "id": "34.c5",
+   "t": 34,
+   "k": null,
+   "p": 67,
+   "chi2": 3535.428659119382,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 0) lock",
+   "tau": 517.8219766690294,
+   "note": "",
+   "face": "34.c5",
+   "on_path": false,
+   "short": "(0,-1,0) L"
+  },
+  {
+   "id": "35.0",
+   "t": 35,
+   "k": 0,
+   "p": 63,
+   "chi2": 3323.37847997921,
+   "kept": true,
+   "action": "single",
+   "what": "(0, 0, -1) locks relative rotation (twist; rot. weight 0.96)",
+   "tau": 580.2664071400027,
+   "note": "",
+   "face": "35.0",
+   "on_path": true,
+   "short": "(0,0,-1) L rot +"
+  },
+  {
+   "id": "35.1",
+   "t": 35,
+   "k": 1,
+   "p": 63,
+   "chi2": 5031.312934446103,
+   "kept": true,
+   "action": "single",
+   "what": "(0, -1, 1) locks relative rotation (tilt; rot. weight 1.00)",
+   "tau": 183.51244508074456,
+   "note": "",
+   "face": "35.1",
+   "on_path": false,
+   "short": "(0,-1,1) L rot +"
+  },
+  {
+   "id": "35.c2",
+   "t": 35,
+   "k": null,
+   "p": 63,
+   "chi2": 5356.056431618035,
+   "kept": false,
+   "action": "candidate",
+   "what": "(0, -1, 1) lock",
+   "tau": 453.1377037476503,
+   "note": "",
+   "face": "35.c2",
+   "on_path": false,
+   "short": "(0,-1,1) L"
+  },
+  {
+   "id": "35.c3",
+   "t": 35,
+   "k": null,
+   "p": 63,
+   "chi2": 6848.191477652365,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) lock",
+   "tau": 277.53131682059256,
+   "note": "",
+   "face": "35.c3",
+   "on_path": false,
+   "short": "(-1,0,-1) L"
+  },
+  {
+   "id": "36.0",
+   "t": 36,
+   "k": 0,
+   "p": 58,
+   "chi2": 3288.0919799586327,
+   "kept": true,
+   "action": "mixed",
+   "what": "(0, -1, 1) releases relative rotation (tilt; rot. weight 0.95)",
+   "tau": 32.87000072903112,
+   "note": "",
+   "face": "36.0",
+   "on_path": true,
+   "short": "(0,-1,1) R rot +"
+  },
+  {
+   "id": "36.1",
+   "t": 36,
+   "k": 1,
+   "p": 58,
+   "chi2": 5031.311874557115,
+   "kept": true,
+   "action": "direct",
+   "what": "(-1, 0, -1) releases relative translation (shear; rot. weight 0.08)",
+   "tau": 0.0,
+   "note": "",
+   "face": "36.1",
+   "on_path": false,
+   "short": "(-1,0,-1) R trans +"
+  },
+  {
+   "id": "37.0",
+   "t": 37,
+   "k": 0,
+   "p": 57,
+   "chi2": 3288.091979783925,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.92 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "37.0",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "37.1",
+   "t": 37,
+   "k": 1,
+   "p": 57,
+   "chi2": 5031.311874531996,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0.23 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "37.1",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "38.0",
+   "t": 38,
+   "k": 0,
+   "p": 53,
+   "chi2": 4359.5215245397085,
+   "kept": true,
+   "action": "single",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.26)",
+   "tau": 107.03107483374508,
+   "note": "",
+   "face": "38.0",
+   "on_path": true,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "38.1",
+   "t": 38,
+   "k": 1,
+   "p": 52,
+   "chi2": 4860.581340073705,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.36)",
+   "tau": 215.24565984644056,
+   "note": "",
+   "face": "38.1",
+   "on_path": false,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "38.c2",
+   "t": 38,
+   "k": null,
+   "p": 53,
+   "chi2": 5583.50037664776,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) release",
+   "tau": 97.48579128448017,
+   "note": "",
+   "face": "38.c2",
+   "on_path": false,
+   "short": "(-1,-1,0) R"
+  },
+  {
+   "id": "39.0",
+   "t": 39,
+   "k": 0,
+   "p": 48,
+   "chi2": 5376.630878290449,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.64)",
+   "tau": 0.0,
+   "note": "",
+   "face": "39.0",
+   "on_path": false,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "39.1",
+   "t": 39,
+   "k": 1,
+   "p": 48,
+   "chi2": 5956.024682962605,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, 0, -1) releases relative rotation (tilt; rot. weight 0.96)",
+   "tau": 232.8523562303386,
+   "note": "",
+   "face": "39.1",
+   "on_path": true,
+   "short": "(-1,0,-1) R rot +"
+  },
+  {
+   "id": "39.c2",
+   "t": 39,
+   "k": null,
+   "p": 48,
+   "chi2": 8249.158685611972,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, -1) release",
+   "tau": 413.121472679809,
+   "note": "",
+   "face": "39.c2",
+   "on_path": false,
+   "short": "(-1,0,-1) R"
+  },
+  {
+   "id": "39.c3",
+   "t": 39,
+   "k": null,
+   "p": 52,
+   "chi2": 11291.955620296274,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) lock",
+   "tau": 573.8923744274767,
+   "note": "",
+   "face": "39.c3",
+   "on_path": false,
+   "short": "(-1,0,0) L"
+  },
+  {
+   "id": "39.c4",
+   "t": 39,
+   "k": null,
+   "p": 52,
+   "chi2": 15799.390736029698,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, 0, 0) lock",
+   "tau": 591.1868429839998,
+   "note": "",
+   "face": "39.c4",
+   "on_path": false,
+   "short": "(-1,0,0) L"
+  },
+  {
+   "id": "40.0",
+   "t": 40,
+   "k": 0,
+   "p": 46,
+   "chi2": 6701.39355605094,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, -1) releases relative rotation+translation (twist, shear; rot. weight 0.63)",
+   "tau": 0.0,
+   "note": "",
+   "face": "40.0",
+   "on_path": false,
+   "short": "(-1,0,-1) R r+t +"
+  },
+  {
+   "id": "40.1",
+   "t": 40,
+   "k": 1,
+   "p": 47,
+   "chi2": 14533.968452968433,
+   "kept": true,
+   "action": "single",
+   "what": "(-1, -1, 0) locks relative rotation (tilt; rot. weight 0.95)",
+   "tau": 452.3254035097953,
+   "note": "",
+   "face": "40.1",
+   "on_path": true,
+   "short": "(-1,-1,0) L rot +"
+  },
+  {
+   "id": "40.c2",
+   "t": 40,
+   "k": null,
+   "p": 47,
+   "chi2": 15073.635165403373,
+   "kept": false,
+   "action": "candidate",
+   "what": "(-1, -1, 0) lock",
+   "tau": 256.68644108224777,
+   "note": "",
+   "face": "40.c2",
+   "on_path": false,
+   "short": "(-1,-1,0) L"
+  },
+  {
+   "id": "41.0",
+   "t": 41,
+   "k": 0,
+   "p": 42,
+   "chi2": 8306.729234364155,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation+translation (twist, shear; rot. weight 0.37)",
+   "tau": 0.0,
+   "note": "",
+   "face": "41.0",
+   "on_path": false,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "41.1",
+   "t": 41,
+   "k": 1,
+   "p": 43,
+   "chi2": 14613.86214846416,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, -1, 0) releases relative translation (shear; rot. weight 0.08)",
+   "tau": 0.0,
+   "note": "",
+   "face": "41.1",
+   "on_path": true,
+   "short": "(-1,-1,0) R trans +"
+  },
+  {
+   "id": "42.0",
+   "t": 42,
+   "k": 0,
+   "p": 38,
+   "chi2": 10519.155674709178,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, -1, 0) releases relative rotation (twist; rot. weight 0.83)",
+   "tau": 0.0,
+   "note": "",
+   "face": "42.0",
+   "on_path": false,
+   "short": "(-1,-1,0) R rot +"
+  },
+  {
+   "id": "42.1",
+   "t": 42,
+   "k": 1,
+   "p": 39,
+   "chi2": 16171.627189488136,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation (tilt; rot. weight 0.98)",
+   "tau": 0.0,
+   "note": "",
+   "face": "42.1",
+   "on_path": true,
+   "short": "(-1,0,0) R rot +"
+  },
+  {
+   "id": "43.0",
+   "t": 43,
+   "k": 0,
+   "p": 36,
+   "chi2": 16210.758299518122,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, -1, 1) releases relative rotation (tilt; rot. weight 0.87)",
+   "tau": 0.0,
+   "note": "",
+   "face": "43.0",
+   "on_path": true,
+   "short": "(0,-1,1) R rot +"
+  },
+  {
+   "id": "43.1",
+   "t": 43,
+   "k": 1,
+   "p": 37,
+   "chi2": 17311.342408250355,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, -1, 0) locks relative rotation+translation (tilt, shear; rot. weight 0.29)",
+   "tau": 0.0,
+   "note": "",
+   "face": "43.1",
+   "on_path": false,
+   "short": "(0,-1,0) L r+t +"
+  },
+  {
+   "id": "44.0",
+   "t": 44,
+   "k": 0,
+   "p": 35,
+   "chi2": 23940.988946809877,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, -1, 0) locks relative rotation+translation (tilt, shear; rot. weight 0.39)",
+   "tau": 0.0,
+   "note": "",
+   "face": "44.0",
+   "on_path": true,
+   "short": "(0,-1,0) L r+t +"
+  },
+  {
+   "id": "44.1",
+   "t": 44,
+   "k": 1,
+   "p": 32,
+   "chi2": 24392.174275671427,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, -1, 0) releases relative rotation (twist; rot. weight 0.93)",
+   "tau": 0.0,
+   "note": "",
+   "face": "44.1",
+   "on_path": false,
+   "short": "(0,-1,0) R rot +"
+  },
+  {
+   "id": "45.0",
+   "t": 45,
+   "k": 0,
+   "p": 30,
+   "chi2": 30425.555411934874,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation+translation (tilt, normal; rot. weight 0.60)",
+   "tau": 0.0,
+   "note": "",
+   "face": "45.0",
+   "on_path": true,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "45.1",
+   "t": 45,
+   "k": 1,
+   "p": 31,
+   "chi2": 39488.995285370576,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) locks relative rotation+translation (tilt, shear; rot. weight 0.26)",
+   "tau": 0.0,
+   "note": "",
+   "face": "45.1",
+   "on_path": false,
+   "short": "(-1,0,0) L r+t +"
+  },
+  {
+   "id": "46.0",
+   "t": 46,
+   "k": 0,
+   "p": 26,
+   "chi2": 52220.28693732302,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation (tilt; rot. weight 0.82)",
+   "tau": 0.0,
+   "note": "",
+   "face": "46.0",
+   "on_path": false,
+   "short": "(-1,0,0) R rot +"
+  },
+  {
+   "id": "46.1",
+   "t": 46,
+   "k": 1,
+   "p": 28,
+   "chi2": 59172.41156348902,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, -1, 0) locks relative rotation+translation (twist, normal; rot. weight 0.60)",
+   "tau": 0.0,
+   "note": "",
+   "face": "46.1",
+   "on_path": true,
+   "short": "(0,-1,0) L r+t +"
+  },
+  {
+   "id": "47.0",
+   "t": 47,
+   "k": 0,
+   "p": 25,
+   "chi2": 84492.75792393144,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, -1, 0) locks relative rotation (twist; rot. weight 0.94)",
+   "tau": 0.0,
+   "note": "",
+   "face": "47.0",
+   "on_path": false,
+   "short": "(-1,-1,0) L rot +"
+  },
+  {
+   "id": "47.1",
+   "t": 47,
+   "k": 1,
+   "p": 23,
+   "chi2": 96814.49835957345,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, 0) releases relative rotation+translation (tilt, normal; rot. weight 0.76)",
+   "tau": 0.0,
+   "note": "",
+   "face": "47.1",
+   "on_path": true,
+   "short": "(-1,0,0) R r+t +"
+  },
+  {
+   "id": "48.0",
+   "t": 48,
+   "k": 0,
+   "p": 24,
+   "chi2": 157193.09780737112,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, -1, 1) locks relative rotation (tilt; rot. weight 0.94)",
+   "tau": 0.0,
+   "note": "",
+   "face": "48.0",
+   "on_path": false,
+   "short": "(0,-1,1) L rot +"
+  },
+  {
+   "id": "48.1",
+   "t": 48,
+   "k": 1,
+   "p": 22,
+   "chi2": 188999.41397338806,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, 0, -1) locks relative rotation+translation (tilt, normal; rot. weight 0.61)",
+   "tau": 0.0,
+   "note": "",
+   "face": "48.1",
+   "on_path": true,
+   "short": "(-1,0,-1) L r+t +"
+  },
+  {
+   "id": "49.0",
+   "t": 49,
+   "k": 0,
+   "p": 22,
+   "chi2": 1051338.5588941383,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, -1, 0) locks relative translation (shear; rot. weight 0.16)",
+   "tau": 0.0,
+   "note": "",
+   "face": "49.0",
+   "on_path": false,
+   "short": "(-1,-1,0) L trans +"
+  },
+  {
+   "id": "49.1",
+   "t": 49,
+   "k": 1,
+   "p": 20,
+   "chi2": 1052231.591704377,
+   "kept": true,
+   "action": "greedy",
+   "what": "(-1, -1, 0) locks relative rotation+translation (twist, shear; rot. weight 0.59)",
+   "tau": 0.0,
+   "note": "",
+   "face": "49.1",
+   "on_path": true,
+   "short": "(-1,-1,0) L r+t +"
+  },
+  {
+   "id": "50.0",
+   "t": 50,
+   "k": 0,
+   "p": 21,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "50.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "50.1",
+   "t": 50,
+   "k": 1,
+   "p": 19,
+   "chi2": 1052231.5917043728,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "50.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "51.0",
+   "t": 51,
+   "k": 0,
+   "p": 20,
+   "chi2": 1051338.5588940852,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "51.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "51.1",
+   "t": 51,
+   "k": 1,
+   "p": 18,
+   "chi2": 1052231.5917043728,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "51.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "52.0",
+   "t": 52,
+   "k": 0,
+   "p": 19,
+   "chi2": 1051338.5588940852,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "52.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "52.1",
+   "t": 52,
+   "k": 1,
+   "p": 17,
+   "chi2": 1052231.5917043728,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "52.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "53.0",
+   "t": 53,
+   "k": 0,
+   "p": 18,
+   "chi2": 1051338.5588940852,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "53.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "53.1",
+   "t": 53,
+   "k": 1,
+   "p": 16,
+   "chi2": 1052231.5917043728,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "53.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "54.0",
+   "t": 54,
+   "k": 0,
+   "p": 17,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "54.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "54.1",
+   "t": 54,
+   "k": 1,
+   "p": 15,
+   "chi2": 1052231.5917043728,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "54.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "55.0",
+   "t": 55,
+   "k": 0,
+   "p": 16,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "55.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "55.1",
+   "t": 55,
+   "k": 1,
+   "p": 14,
+   "chi2": 1052231.5917043728,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "55.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "56.0",
+   "t": 56,
+   "k": 0,
+   "p": 15,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "56.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "56.1",
+   "t": 56,
+   "k": 1,
+   "p": 13,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "56.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "57.0",
+   "t": 57,
+   "k": 0,
+   "p": 14,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "57.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "57.1",
+   "t": 57,
+   "k": 1,
+   "p": 12,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "57.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "58.0",
+   "t": 58,
+   "k": 0,
+   "p": 13,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "58.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "58.1",
+   "t": 58,
+   "k": 1,
+   "p": 11,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "58.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "59.0",
+   "t": 59,
+   "k": 0,
+   "p": 12,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "59.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "59.1",
+   "t": 59,
+   "k": 1,
+   "p": 10,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "59.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "60.0",
+   "t": 60,
+   "k": 0,
+   "p": 11,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "60.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "60.1",
+   "t": 60,
+   "k": 1,
+   "p": 9,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "60.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "61.0",
+   "t": 61,
+   "k": 0,
+   "p": 10,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "61.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "61.1",
+   "t": 61,
+   "k": 1,
+   "p": 8,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "61.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "62.0",
+   "t": 62,
+   "k": 0,
+   "p": 9,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "62.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "62.1",
+   "t": 62,
+   "k": 1,
+   "p": 7,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "62.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "63.0",
+   "t": 63,
+   "k": 0,
+   "p": 8,
+   "chi2": 1051338.5588940866,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "63.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "63.1",
+   "t": 63,
+   "k": 1,
+   "p": 6,
+   "chi2": 1052231.5917043765,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "63.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "64.0",
+   "t": 64,
+   "k": 0,
+   "p": 7,
+   "chi2": 1051338.5588940864,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 2.5e-17 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "64.0",
+   "on_path": false,
+   "short": "angle"
+  },
+  {
+   "id": "64.1",
+   "t": 64,
+   "k": 1,
+   "p": 5,
+   "chi2": 1052231.5917043774,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "64.1",
+   "on_path": true,
+   "short": "angle"
+  },
+  {
+   "id": "65.0",
+   "t": 65,
+   "k": 0,
+   "p": 2,
+   "chi2": 1114869.7826676639,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.64)",
+   "tau": 0.0,
+   "note": "",
+   "face": "65.0",
+   "on_path": true,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "65.1",
+   "t": 65,
+   "k": 1,
+   "p": 3,
+   "chi2": 1114869.782667664,
+   "kept": true,
+   "action": "greedy",
+   "what": "(0, 0, -1) releases relative rotation+translation (twist, normal; rot. weight 0.73)",
+   "tau": 0.0,
+   "note": "",
+   "face": "65.1",
+   "on_path": false,
+   "short": "(0,0,-1) R r+t +"
+  },
+  {
+   "id": "66.0",
+   "t": 66,
+   "k": 0,
+   "p": 1,
+   "chi2": 1114869.7826676639,
+   "kept": true,
+   "action": "orientation",
+   "what": "orientation direction with g = 0 frozen (not determined by the data)",
+   "tau": 0.0,
+   "note": "",
+   "face": "66.0",
+   "on_path": true,
+   "short": "angle"
+  }
+ ],
+ "edges": [
+  {
+   "src": "0.0",
+   "dst": "1.0",
+   "dchi2": -8.243809048735784e-07
+  },
+  {
+   "src": "1.0",
+   "dst": "2.0",
+   "dchi2": -6.430263965739869e-07
+  },
+  {
+   "src": "2.0",
+   "dst": "3.0",
+   "dchi2": -5.904714015514401e-07
+  },
+  {
+   "src": "3.0",
+   "dst": "4.0",
+   "dchi2": -5.641109481757667e-07
+  },
+  {
+   "src": "4.0",
+   "dst": "5.0",
+   "dchi2": -5.573561736582633e-07
+  },
+  {
+   "src": "5.0",
+   "dst": "6.0",
+   "dchi2": -6.921856510189173e-07
+  },
+  {
+   "src": "6.0",
+   "dst": "7.0",
+   "dchi2": -3.335528333536786e-07
+  },
+  {
+   "src": "7.0",
+   "dst": "8.0",
+   "dchi2": 4.734456538812992e-05
+  },
+  {
+   "src": "7.0",
+   "dst": "8.c1",
+   "dchi2": 4.73607638014073e-05
+  },
+  {
+   "src": "8.0",
+   "dst": "9.0",
+   "dchi2": 0.02884323502419761
+  },
+  {
+   "src": "8.0",
+   "dst": "9.c1",
+   "dchi2": 0.028843237608498384
+  },
+  {
+   "src": "8.0",
+   "dst": "9.c2",
+   "dchi2": 0.028843240254985858
+  },
+  {
+   "src": "8.0",
+   "dst": "9.c3",
+   "dchi2": 0.028843245589186495
+  },
+  {
+   "src": "8.0",
+   "dst": "9.1",
+   "dchi2": 0.2400434642307374
+  },
+  {
+   "src": "9.0",
+   "dst": "10.0",
+   "dchi2": 0.39371244347580614
+  },
+  {
+   "src": "9.0",
+   "dst": "10.1",
+   "dchi2": 0.45873606661136535
+  },
+  {
+   "src": "9.1",
+   "dst": "10.c2",
+   "dchi2": 0.2490052845390096
+  },
+  {
+   "src": "9.1",
+   "dst": "10.c3",
+   "dchi2": 0.2549897203760878
+  },
+  {
+   "src": "9.1",
+   "dst": "10.c4",
+   "dchi2": 0.2604817879502832
+  },
+  {
+   "src": "9.0",
+   "dst": "10.c5",
+   "dchi2": 0.47942599207047465
+  },
+  {
+   "src": "9.0",
+   "dst": "10.c6",
+   "dchi2": 0.5654310525532225
+  },
+  {
+   "src": "9.0",
+   "dst": "10.c7",
+   "dchi2": 0.5654310551055488
+  },
+  {
+   "src": "9.1",
+   "dst": "10.c8",
+   "dchi2": 0.3545331356920087
+  },
+  {
+   "src": "9.1",
+   "dst": "10.c9",
+   "dchi2": 0.4399586658528136
+  },
+  {
+   "src": "9.0",
+   "dst": "10.c10",
+   "dchi2": 0.7170647755698383
+  },
+  {
+   "src": "9.0",
+   "dst": "10.c11",
+   "dchi2": 0.7175004247218766
+  },
+  {
+   "src": "10.1",
+   "dst": "11.0",
+   "dchi2": 0.31171490189895223
+  },
+  {
+   "src": "10.1",
+   "dst": "11.c1",
+   "dchi2": 0.3117231502175315
+  },
+  {
+   "src": "10.0",
+   "dst": "11.1",
+   "dchi2": 0.3768025778497872
+  },
+  {
+   "src": "10.0",
+   "dst": "11.c3",
+   "dchi2": 0.7510141795952308
+  },
+  {
+   "src": "10.1",
+   "dst": "11.c4",
+   "dchi2": 0.6865816139417404
+  },
+  {
+   "src": "11.1",
+   "dst": "12.0",
+   "dchi2": 0.9676142487481627
+  },
+  {
+   "src": "11.0",
+   "dst": "12.1",
+   "dchi2": -1.3210552651798935e-09
+  },
+  {
+   "src": "12.0",
+   "dst": "13.0",
+   "dchi2": 0.31247880216579915
+  },
+  {
+   "src": "12.1",
+   "dst": "13.1",
+   "dchi2": 0.5717669455144971
+  },
+  {
+   "src": "12.1",
+   "dst": "13.c2",
+   "dchi2": 0.5791725424490011
+  },
+  {
+   "src": "12.1",
+   "dst": "13.c3",
+   "dchi2": 0.9624652622515129
+  },
+  {
+   "src": "12.1",
+   "dst": "13.c4",
+   "dchi2": 0.9731167026893246
+  },
+  {
+   "src": "12.1",
+   "dst": "13.c5",
+   "dchi2": 0.9736496331199049
+  },
+  {
+   "src": "13.0",
+   "dst": "14.0",
+   "dchi2": -1.454196763006621e-10
+  },
+  {
+   "src": "13.1",
+   "dst": "14.1",
+   "dchi2": -3.3922731290658703e-10
+  },
+  {
+   "src": "14.1",
+   "dst": "15.0",
+   "dchi2": 3.049831977893703
+  },
+  {
+   "src": "14.1",
+   "dst": "15.1",
+   "dchi2": 3.2397776052340816
+  },
+  {
+   "src": "14.1",
+   "dst": "15.c2",
+   "dchi2": 3.3882672428250658
+  },
+  {
+   "src": "14.1",
+   "dst": "15.c3",
+   "dchi2": 3.394444939858161
+  },
+  {
+   "src": "14.1",
+   "dst": "15.c4",
+   "dchi2": 3.408209208114684
+  },
+  {
+   "src": "14.1",
+   "dst": "15.c5",
+   "dchi2": 3.5195245642471065
+  },
+  {
+   "src": "14.0",
+   "dst": "15.c6",
+   "dchi2": -7.531752999057062e-13
+  },
+  {
+   "src": "15.0",
+   "dst": "16.0",
+   "dchi2": 0.8192824467285931
+  },
+  {
+   "src": "15.0",
+   "dst": "16.c1",
+   "dchi2": 0.8192824479500445
+  },
+  {
+   "src": "15.1",
+   "dst": "16.1",
+   "dchi2": 1.692490115992456
+  },
+  {
+   "src": "15.1",
+   "dst": "16.c3",
+   "dchi2": 5162.53015910537
+  },
+  {
+   "src": "16.0",
+   "dst": "17.0",
+   "dchi2": -3.375077994860476e-11
+  },
+  {
+   "src": "16.1",
+   "dst": "17.1",
+   "dchi2": -4.786215868080035e-11
+  },
+  {
+   "src": "17.0",
+   "dst": "18.0",
+   "dchi2": -1.6910917111090384e-12
+  },
+  {
+   "src": "17.1",
+   "dst": "18.1",
+   "dchi2": -5.826450433232822e-13
+  },
+  {
+   "src": "18.1",
+   "dst": "19.0",
+   "dchi2": 0.0
+  },
+  {
+   "src": "18.0",
+   "dst": "19.1",
+   "dchi2": 19.214914198344005
+  },
+  {
+   "src": "18.0",
+   "dst": "19.c2",
+   "dchi2": 20.513884238661873
+  },
+  {
+   "src": "18.0",
+   "dst": "19.c3",
+   "dchi2": 26.286763557604687
+  },
+  {
+   "src": "18.0",
+   "dst": "19.c4",
+   "dchi2": 31.989992173418173
+  },
+  {
+   "src": "19.0",
+   "dst": "20.0",
+   "dchi2": -4.263256414560601e-14
+  },
+  {
+   "src": "19.1",
+   "dst": "20.1",
+   "dchi2": 5.206999476738119
+  },
+  {
+   "src": "20.1",
+   "dst": "21.0",
+   "dchi2": 9.043382260385556
+  },
+  {
+   "src": "20.0",
+   "dst": "21.1",
+   "dchi2": 35.800320973105215
+  },
+  {
+   "src": "20.0",
+   "dst": "21.c2",
+   "dchi2": 40.372786107153445
+  },
+  {
+   "src": "20.0",
+   "dst": "21.c3",
+   "dchi2": 139.6751526382645
+  },
+  {
+   "src": "20.0",
+   "dst": "21.c4",
+   "dchi2": 154.69365823591804
+  },
+  {
+   "src": "21.0",
+   "dst": "22.0",
+   "dchi2": 11.832409052891563
+  },
+  {
+   "src": "21.1",
+   "dst": "22.1",
+   "dchi2": -6.93717083777301e-10
+  },
+  {
+   "src": "22.1",
+   "dst": "23.0",
+   "dchi2": -2.276578925375361e-11
+  },
+  {
+   "src": "22.0",
+   "dst": "23.1",
+   "dchi2": 27.038059839076084
+  },
+  {
+   "src": "23.0",
+   "dst": "24.0",
+   "dchi2": 19.992392608958284
+  },
+  {
+   "src": "23.1",
+   "dst": "24.1",
+   "dchi2": -9.37262711886433e-10
+  },
+  {
+   "src": "24.0",
+   "dst": "25.0",
+   "dchi2": -1.643087443881086e-09
+  },
+  {
+   "src": "24.1",
+   "dst": "25.1",
+   "dchi2": 122.38216388381622
+  },
+  {
+   "src": "24.1",
+   "dst": "25.c2",
+   "dchi2": 147.48150558306517
+  },
+  {
+   "src": "25.0",
+   "dst": "26.0",
+   "dchi2": 0.9182298888076161
+  },
+  {
+   "src": "25.0",
+   "dst": "26.1",
+   "dchi2": 2.236758565244628
+  },
+  {
+   "src": "25.0",
+   "dst": "26.c2",
+   "dchi2": 2.4266069317058054
+  },
+  {
+   "src": "25.0",
+   "dst": "26.c3",
+   "dchi2": 2.895115870753955
+  },
+  {
+   "src": "25.0",
+   "dst": "26.c4",
+   "dchi2": 3.2033255166690253
+  },
+  {
+   "src": "25.0",
+   "dst": "26.c5",
+   "dchi2": 4.478834090619017
+  },
+  {
+   "src": "25.0",
+   "dst": "26.c6",
+   "dchi2": 5.016368070723303
+  },
+  {
+   "src": "25.0",
+   "dst": "26.c7",
+   "dchi2": 5.794771921953554
+  },
+  {
+   "src": "25.1",
+   "dst": "26.c8",
+   "dchi2": 64.61402436134114
+  },
+  {
+   "src": "26.0",
+   "dst": "27.0",
+   "dchi2": -5.025157179261441e-09
+  },
+  {
+   "src": "26.1",
+   "dst": "27.1",
+   "dchi2": -2.41860220739909e-09
+  },
+  {
+   "src": "27.0",
+   "dst": "28.0",
+   "dchi2": 64.34052022155831
+  },
+  {
+   "src": "27.0",
+   "dst": "28.1",
+   "dchi2": 68.2656417083563
+  },
+  {
+   "src": "27.0",
+   "dst": "28.c2",
+   "dchi2": 79.97376627343411
+  },
+  {
+   "src": "27.1",
+   "dst": "28.c3",
+   "dchi2": 109.59529693090326
+  },
+  {
+   "src": "27.0",
+   "dst": "28.c4",
+   "dchi2": 138.70366012766843
+  },
+  {
+   "src": "27.0",
+   "dst": "28.c5",
+   "dchi2": 143.99417104480406
+  },
+  {
+   "src": "28.0",
+   "dst": "29.0",
+   "dchi2": -1.7758168269210728e-09
+  },
+  {
+   "src": "28.1",
+   "dst": "29.1",
+   "dchi2": 91.34178547650848
+  },
+  {
+   "src": "28.1",
+   "dst": "29.c2",
+   "dchi2": 794.6739814193345
+  },
+  {
+   "src": "28.1",
+   "dst": "29.c3",
+   "dchi2": 814.8863233649854
+  },
+  {
+   "src": "28.1",
+   "dst": "29.c4",
+   "dchi2": 929.796132150934
+  },
+  {
+   "src": "29.0",
+   "dst": "30.0",
+   "dchi2": -1.0305711839464493e-10
+  },
+  {
+   "src": "29.1",
+   "dst": "30.1",
+   "dchi2": -2.39117525779875e-09
+  },
+  {
+   "src": "30.0",
+   "dst": "31.0",
+   "dchi2": 50.09097921104865
+  },
+  {
+   "src": "30.0",
+   "dst": "31.1",
+   "dchi2": 71.51171483309986
+  },
+  {
+   "src": "30.0",
+   "dst": "31.c2",
+   "dchi2": 85.12158865622155
+  },
+  {
+   "src": "30.0",
+   "dst": "31.c3",
+   "dchi2": 95.73744766442826
+  },
+  {
+   "src": "30.1",
+   "dst": "31.c4",
+   "dchi2": 5.024152266690578
+  },
+  {
+   "src": "30.0",
+   "dst": "31.c5",
+   "dchi2": 168.6157131697156
+  },
+  {
+   "src": "30.1",
+   "dst": "31.c6",
+   "dchi2": 683.0083564464401
+  },
+  {
+   "src": "30.1",
+   "dst": "31.c7",
+   "dchi2": 1022.7114244228486
+  },
+  {
+   "src": "30.1",
+   "dst": "31.c8",
+   "dchi2": 1609.7178682813542
+  },
+  {
+   "src": "31.1",
+   "dst": "32.0",
+   "dchi2": -2.2986284875514684e-08
+  },
+  {
+   "src": "31.0",
+   "dst": "32.1",
+   "dchi2": 115.58864983514059
+  },
+  {
+   "src": "31.0",
+   "dst": "32.c2",
+   "dchi2": 912.9856684299775
+  },
+  {
+   "src": "31.0",
+   "dst": "32.c3",
+   "dchi2": 1147.189348782273
+  },
+  {
+   "src": "31.0",
+   "dst": "32.c4",
+   "dchi2": 1387.5085373601107
+  },
+  {
+   "src": "32.0",
+   "dst": "33.0",
+   "dchi2": 8.164795570220406
+  },
+  {
+   "src": "32.0",
+   "dst": "33.1",
+   "dchi2": 10.8703097395736
+  },
+  {
+   "src": "32.0",
+   "dst": "33.c2",
+   "dchi2": 12.660156166561364
+  },
+  {
+   "src": "32.0",
+   "dst": "33.c3",
+   "dchi2": 15.117377232694878
+  },
+  {
+   "src": "32.0",
+   "dst": "33.c4",
+   "dchi2": 16.098928840717917
+  },
+  {
+   "src": "32.0",
+   "dst": "33.c5",
+   "dchi2": 34.06661262253107
+  },
+  {
+   "src": "32.0",
+   "dst": "33.c6",
+   "dchi2": 118.83448023693876
+  },
+  {
+   "src": "32.0",
+   "dst": "33.c7",
+   "dchi2": 122.24719175035432
+  },
+  {
+   "src": "32.1",
+   "dst": "33.c8",
+   "dchi2": 83.55832971805023
+  },
+  {
+   "src": "32.1",
+   "dst": "33.c9",
+   "dchi2": 676.1904809628945
+  },
+  {
+   "src": "32.1",
+   "dst": "33.c10",
+   "dchi2": 782.978616381725
+  },
+  {
+   "src": "32.1",
+   "dst": "33.c11",
+   "dchi2": 3050.0975879182424
+  },
+  {
+   "src": "33.1",
+   "dst": "34.0",
+   "dchi2": 961.2746375724346
+  },
+  {
+   "src": "33.1",
+   "dst": "34.1",
+   "dchi2": 1145.7043668405825
+  },
+  {
+   "src": "33.0",
+   "dst": "34.c2",
+   "dchi2": 1233.8162458157308
+  },
+  {
+   "src": "33.0",
+   "dst": "34.c3",
+   "dchi2": 1271.6567327935365
+  },
+  {
+   "src": "33.1",
+   "dst": "34.c4",
+   "dchi2": 1482.9588501155388
+  },
+  {
+   "src": "33.0",
+   "dst": "34.c5",
+   "dchi2": 3228.283063069315
+  },
+  {
+   "src": "34.0",
+   "dst": "35.0",
+   "dchi2": 2052.2527322254755
+  },
+  {
+   "src": "34.1",
+   "dst": "35.1",
+   "dchi2": 3575.7574573990933
+  },
+  {
+   "src": "34.1",
+   "dst": "35.c2",
+   "dchi2": 3900.5009545710254
+  },
+  {
+   "src": "34.1",
+   "dst": "35.c3",
+   "dchi2": 5392.636000605356
+  },
+  {
+   "src": "35.0",
+   "dst": "36.0",
+   "dchi2": -35.286500006892766
+  },
+  {
+   "src": "35.1",
+   "dst": "36.1",
+   "dchi2": -0.0008291764170280658
+  },
+  {
+   "src": "36.0",
+   "dst": "37.0",
+   "dchi2": -9.07152752915863e-08
+  },
+  {
+   "src": "36.1",
+   "dst": "37.1",
+   "dchi2": -1.1766132956836373e-08
+  },
+  {
+   "src": "37.0",
+   "dst": "38.0",
+   "dchi2": 1071.429544772608
+  },
+  {
+   "src": "37.0",
+   "dst": "38.1",
+   "dchi2": 1572.4893603066048
+  },
+  {
+   "src": "37.1",
+   "dst": "38.c2",
+   "dchi2": 552.1885021160961
+  },
+  {
+   "src": "38.1",
+   "dst": "39.0",
+   "dchi2": 516.0495382979689
+  },
+  {
+   "src": "38.0",
+   "dst": "39.1",
+   "dchi2": 1596.5031586829564
+  },
+  {
+   "src": "38.0",
+   "dst": "39.c2",
+   "dchi2": 3889.6371613323236
+  },
+  {
+   "src": "38.0",
+   "dst": "39.c3",
+   "dchi2": 6932.4340960166255
+  },
+  {
+   "src": "38.0",
+   "dst": "39.c4",
+   "dchi2": 11439.86921175005
+  },
+  {
+   "src": "39.0",
+   "dst": "40.0",
+   "dchi2": 1324.7626778671784
+  },
+  {
+   "src": "39.1",
+   "dst": "40.1",
+   "dchi2": 8577.943770423582
+  },
+  {
+   "src": "39.1",
+   "dst": "40.c2",
+   "dchi2": 9117.610482858523
+  },
+  {
+   "src": "40.0",
+   "dst": "41.0",
+   "dchi2": 1605.3356784155194
+  },
+  {
+   "src": "40.1",
+   "dst": "41.1",
+   "dchi2": 79.89369709576022
+  },
+  {
+   "src": "41.0",
+   "dst": "42.0",
+   "dchi2": 2212.426440421772
+  },
+  {
+   "src": "41.1",
+   "dst": "42.1",
+   "dchi2": 1557.7650418330068
+  },
+  {
+   "src": "42.1",
+   "dst": "43.0",
+   "dchi2": 39.13111070275954
+  },
+  {
+   "src": "42.0",
+   "dst": "43.1",
+   "dchi2": 6792.1867338737975
+  },
+  {
+   "src": "43.0",
+   "dst": "44.0",
+   "dchi2": 7730.230647499357
+  },
+  {
+   "src": "43.1",
+   "dst": "44.1",
+   "dchi2": 7080.831867954959
+  },
+  {
+   "src": "44.0",
+   "dst": "45.0",
+   "dchi2": 6484.56646605947
+  },
+  {
+   "src": "44.1",
+   "dst": "45.1",
+   "dchi2": 15096.821011544467
+  },
+  {
+   "src": "45.1",
+   "dst": "46.0",
+   "dchi2": 12731.291653054068
+  },
+  {
+   "src": "45.0",
+   "dst": "46.1",
+   "dchi2": 28746.856152812434
+  },
+  {
+   "src": "46.0",
+   "dst": "47.0",
+   "dchi2": 32272.47098761914
+  },
+  {
+   "src": "46.1",
+   "dst": "47.1",
+   "dchi2": 37642.08680027385
+  },
+  {
+   "src": "47.0",
+   "dst": "48.0",
+   "dchi2": 72700.33989010738
+  },
+  {
+   "src": "47.1",
+   "dst": "48.1",
+   "dchi2": 92184.91561711192
+  },
+  {
+   "src": "48.0",
+   "dst": "49.0",
+   "dchi2": 894145.461095646
+  },
+  {
+   "src": "48.1",
+   "dst": "49.1",
+   "dchi2": 863232.1777332857
+  },
+  {
+   "src": "49.0",
+   "dst": "50.0",
+   "dchi2": -6.984919309616089e-10
+  },
+  {
+   "src": "49.1",
+   "dst": "50.1",
+   "dchi2": 1.1641532182693481e-09
+  },
+  {
+   "src": "50.0",
+   "dst": "51.0",
+   "dchi2": 6.984919309616089e-10
+  },
+  {
+   "src": "50.1",
+   "dst": "51.1",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "51.0",
+   "dst": "52.0",
+   "dchi2": 6.984919309616089e-10
+  },
+  {
+   "src": "51.1",
+   "dst": "52.1",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "52.0",
+   "dst": "53.0",
+   "dchi2": 6.984919309616089e-10
+  },
+  {
+   "src": "52.1",
+   "dst": "53.1",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "53.0",
+   "dst": "54.0",
+   "dchi2": 2.0954757928848267e-09
+  },
+  {
+   "src": "53.1",
+   "dst": "54.1",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "54.0",
+   "dst": "55.0",
+   "dchi2": 2.561137080192566e-09
+  },
+  {
+   "src": "54.1",
+   "dst": "55.1",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "55.0",
+   "dst": "56.0",
+   "dchi2": 2.561137080192566e-09
+  },
+  {
+   "src": "55.1",
+   "dst": "56.1",
+   "dchi2": 6.51925802230835e-09
+  },
+  {
+   "src": "56.0",
+   "dst": "57.0",
+   "dchi2": 2.561137080192566e-09
+  },
+  {
+   "src": "56.1",
+   "dst": "57.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "57.0",
+   "dst": "58.0",
+   "dchi2": 2.561137080192566e-09
+  },
+  {
+   "src": "57.1",
+   "dst": "58.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "58.0",
+   "dst": "59.0",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "58.1",
+   "dst": "59.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "59.0",
+   "dst": "60.0",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "59.1",
+   "dst": "60.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "60.0",
+   "dst": "61.0",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "60.1",
+   "dst": "61.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "61.0",
+   "dst": "62.0",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "61.1",
+   "dst": "62.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "62.0",
+   "dst": "63.0",
+   "dchi2": 2.7939677238464355e-09
+  },
+  {
+   "src": "62.1",
+   "dst": "63.1",
+   "dchi2": 8.847564458847046e-09
+  },
+  {
+   "src": "63.0",
+   "dst": "64.0",
+   "dchi2": 2.561137080192566e-09
+  },
+  {
+   "src": "63.1",
+   "dst": "64.1",
+   "dchi2": 9.778887033462524e-09
+  },
+  {
+   "src": "64.1",
+   "dst": "65.0",
+   "dchi2": 62638.19096329296
+  },
+  {
+   "src": "64.0",
+   "dst": "65.1",
+   "dchi2": 63531.223773578415
+  },
+  {
+   "src": "65.0",
+   "dst": "66.0",
+   "dchi2": -2.3283064365386963e-10
+  }
+ ]
+}

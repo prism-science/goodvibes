@@ -1,0 +1,69 @@
+step,action,category,p,removed,tau,dchi2_refit,chi2_train,chi2_test_pp,oracle,AICc,BIC,LR_pval,R_cv,d_T,rot_frozen,kappa,converged,what
+0,start,start,126,0,0,0,100.1,2.052,1.732,621.06,793.79,1,0.02293,9.408e+04,False,1e+16,True,start
+1,direct,direct,125,1,0,-8.244e-07,100.1,2.052,1.732,612.61,788.28,1,0.02263,9.408e+04,False,1e+16,True,"(0, -1, 1) releases relative rotation+translation (tilt, shear; rot. weight 0.71) -> 0"
+2,direct,direct,123,2,0,-6.43e-07,100.1,2.052,1.732,596.15,777.27,1,0.02444,9.408e+04,False,1e+16,True,"(0, -1, 1) releases relative rotation+translation (tilt, shear; rot. weight 0.78) -> 0"
+3,direct,direct,122,1,0,-5.905e-07,100.1,2.052,1.732,588.11,771.76,1,0.02451,9.408e+04,False,1e+16,True,"(-1, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.60) -> 0"
+4,direct,direct,121,1,0,-5.641e-07,100.1,2.052,1.732,580.21,766.26,1,0.02477,9.408e+04,False,1e+16,True,"(0, -1, 0) releases relative rotation+translation (twist, shear; rot. weight 0.44) -> 0"
+5,direct,direct,120,1,0,-5.574e-07,100.1,2.052,1.732,572.43,760.75,1,0.02453,9.408e+04,False,1e+16,True,"(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.70) -> 0"
+6,freeze,orientation,119,1,0,-6.922e-07,100.1,2.052,1.732,564.78,755.25,1,0.02453,9.408e+04,False,1e+16,True,orientation direction with g = 8e-15 frozen (not determined by the data)
+7,direct,direct,118,1,0,-3.336e-07,100.1,2.052,1.732,557.25,749.74,1,0.02457,9.408e+04,False,1e+16,True,"(-1, 0, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.65) -> 0"
+8,fit-driven,fit-driven,115,3,0,-6.608e-08,100.1,2.052,1.732,535.35,733.23,1,0.02521,9.408e+04,False,1.53e+10,True,"(0, -1, 1) releases relative translation (shear; rot. weight 0.19) -> 0"
+9,geodesic,mixed,113,2,0.001846,4.734e-05,100.1,2.052,1.733,521.3,722.22,1,0.02528,9.408e+04,False,2.2e+07,True,"(0, -1, 0) releases relative rotation (tilt; rot. weight 0.85) -> 0"
+10,geodesic,single,112,1,0.5038,0.02884,100.1,2.074,1.739,514.46,716.74,1,0.02542,9.407e+04,False,4.79e+06,True,"(-1, -1, 0) releases relative translation (shear; rot. weight 0.16) -> 0"
+11,geodesic,single,110,2,39.39,0.4587,100.6,2.11,1.865,501.49,706.19,1,0.02308,9.41e+04,False,3.51e+09,True,"(-1, 0, -1) releases relative rotation+translation (twist, normal; rot. weight 0.47) -> 0"
+12,geodesic,single,108,2,18.43,0.3117,100.9,2.094,1.826,488.77,695.49,1,0.02377,9.41e+04,False,3.39e+09,True,"(-1, 0, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.54) -> 0"
+13,freeze,orientation,107,1,0,-1.321e-09,100.9,2.094,1.826,482.39,689.98,1,0.02377,9.41e+04,False,1.11e+09,True,orientation direction with g = 0.00015 frozen (not determined by the data)
+14,geodesic,single,105,2,49.73,0.5718,101.5,2.231,1.891,470.49,679.55,1,0.02461,9.409e+04,False,3.29e+08,True,"(-1, -1, 0) releases relative rotation (tilt; rot. weight 0.92) -> 0"
+15,freeze,orientation,104,1,0,-3.392e-10,101.5,2.231,1.891,464.38,674.04,1,0.02491,9.409e+04,False,1.91e+08,True,orientation direction with g = 0.0015 frozen (not determined by the data)
+16,geodesic,single,100,4,18.27,3.24,104.7,2.478,2.258,444.04,655.26,1,0.02643,9.41e+04,False,1.31e+08,True,"(0, -1, 1) releases relative rotation+translation (tilt, normal; rot. weight 0.28) -> 0"
+17,geodesic,single,98,2,109.6,1.692,106.4,2.944,2.454,434.42,645.94,1,0.02438,9.411e+04,False,2.7e+08,True,"(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.67) -> 0"
+18,freeze,orientation,97,1,0,-4.786e-11,106.4,2.944,2.454,428.88,640.43,1,0.02489,9.411e+04,False,5.46e+07,True,orientation direction with g = 0.0014 frozen (not determined by the data)
+19,freeze,orientation,96,1,0,-5.826e-13,106.4,2.944,2.454,423.41,634.93,1,0.02432,9.411e+04,False,2.91e+07,True,orientation direction with g = 0.0069 frozen (not determined by the data)
+20,freeze,orientation,95,1,0,0,106.4,2.944,2.454,418.02,629.42,1,0.02414,9.411e+04,False,9.98e+06,True,orientation direction with g = 0.013 frozen (not determined by the data)
+21,freeze,orientation,94,1,0,-4.263e-14,106.4,2.944,2.454,412.7,623.92,1,0.02373,9.411e+04,False,6.03e+06,True,orientation direction with g = 0.038 frozen (not determined by the data)
+22,geodesic,single,91,3,18.96,35.8,142.2,3.687,4.125,432.95,643.2,0.19,0.02591,9.408e+04,False,3.6e+06,True,"(0, -1, 0) releases relative rotation+translation (tilt, shear; rot. weight 0.68) -> 0"
+23,freeze,orientation,90,1,0,-6.937e-10,142.2,3.687,4.125,427.9,637.7,0.224,0.026,9.408e+04,False,2.4e+06,True,orientation direction with g = 0.13 frozen (not determined by the data)
+24,freeze,orientation,89,1,0,-2.277e-11,142.2,3.687,4.125,422.91,632.19,0.26,0.02613,9.408e+04,False,1.74e+06,True,orientation direction with g = 0.2 frozen (not determined by the data)
+25,geodesic,mixed,86,3,79.59,19.99,162.2,4.745,4.142,428.32,635.67,0.0141,0.03112,9.367e+04,False,2.86e+06,True,"(-1, 0, 0) releases relative rotation (tilt; rot. weight 0.96) -> 0"
+26,freeze,orientation,85,1,0,-1.643e-09,162.2,4.745,4.142,423.59,630.16,0.0183,0.03125,9.367e+04,False,1.04e+06,True,orientation direction with g = 0.18 frozen (not determined by the data)
+27,geodesic,single,82,3,44.71,0.9182,163.1,3.309,4.628,410.64,614.57,0.0314,0.02789,9.413e+04,False,8.7e+05,True,"(-1, 0, -1) releases relative translation (shear; rot. weight 0.10) -> 0"
+28,freeze,orientation,81,1,0,-5.025e-09,163.1,3.309,4.628,406.13,609.06,0.0392,0.02784,9.413e+04,False,5.25e+05,True,orientation direction with g = 0.68 frozen (not determined by the data)
+29,geodesic,single,77,4,22.91,64.34,227.5,4.221,5.8,452.97,651.38,6.8e-09,0.03012,9.444e+04,False,1.1e+06,True,"(-1, 0, -1) releases relative translation (shear; rot. weight 0.07) -> 0"
+30,freeze,orientation,76,1,0,-1.776e-09,227.5,4.221,5.8,448.72,645.87,1.12e-08,0.02995,9.444e+04,False,6.32e+05,True,orientation direction with g = 0.51 frozen (not determined by the data)
+31,freeze,orientation,75,1,0,-1.031e-10,227.5,4.221,5.8,444.53,640.37,1.81e-08,0.02982,9.444e+04,False,2.87e+05,True,orientation direction with g = 0.9 frozen (not determined by the data)
+32,geodesic,single,72,3,30.17,71.51,299,5.394,7.297,503.74,695.36,1.89e-18,0.03477,9.456e+04,False,8.56e+05,True,"(0, 0, -1) releases relative rotation+translation (twist, shear; rot. weight 0.41) -> 0"
+33,freeze,orientation,71,1,0,-2.299e-08,299,5.394,7.297,499.74,689.86,3.67e-18,0.03411,9.456e+04,False,1.78e+05,True,orientation direction with g = 0.77 frozen (not determined by the data)
+34,geodesic,single,68,3,10.03,10.87,309.9,6.467,7.782,498.87,684.21,4.82e-19,0.03603,9.452e+04,False,1.96e+05,True,"(-1, -1, 0) releases relative rotation (twist; rot. weight 0.94) -> 0"
+35,geodesic,single,64,4,548.3,961.3,1271,27.17,26.53,1445.1,1623.5,2.2e-204,0.06762,9.185e+04,False,1.66e+05,True,"(0, -1, 0) releases relative rotation+translation (twist, normal; rot. weight 0.75) -> 0"
+36,geodesic,single,63,1,580.3,2052,3323,68.09,76.34,3493.7,3670.2,0,0.09996,9.373e+04,False,1.24e+06,True,"(0, 0, -1) locks relative rotation (twist; rot. weight 0.96) -> inf"
+37,geodesic,mixed,58,5,32.87,-35.29,3288,67.12,77.47,3440.7,3607.4,0,0.1036,9.346e+04,False,1.26e+06,True,"(0, -1, 1) releases relative rotation (tilt; rot. weight 0.95) -> 0"
+38,freeze,orientation,57,1,0,-9.072e-08,3288,67.12,77.47,3437.3,3601.9,0,0.1031,9.346e+04,False,6.07e+05,True,orientation direction with g = 0.92 frozen (not determined by the data)
+39,geodesic,single,53,4,107,1071,4360,79.48,83.59,4495.3,4651.3,0,0.09442,9.776e+04,False,1.09e+05,True,"(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.26) -> 0"
+40,geodesic,single,48,5,232.9,1597,5956,70.42,112.4,6075.9,6220.3,0,0.1103,9.622e+04,False,3.03e+05,True,"(-1, 0, -1) releases relative rotation (tilt; rot. weight 0.96) -> 0"
+41,geodesic,single,47,1,452.3,8578,1.453e+04,273.2,540.4,14651,14793,0,0.1892,8.773e+04,False,1.19e+06,True,"(-1, -1, 0) locks relative rotation (tilt; rot. weight 0.95) -> inf"
+42,greedy,greedy,43,4,0,79.89,1.461e+04,247.6,501.6,14719,14851,0,0.1819,8.864e+04,False,2.78e+05,True,"(-1, -1, 0) releases relative translation (shear; rot. weight 0.08) -> 0"
+43,greedy,greedy,39,4,0,1558,1.617e+04,218.1,532,16265,16386,0,0.1873,9.299e+04,False,5.36e+04,True,"(-1, 0, 0) releases relative rotation (tilt; rot. weight 0.98) -> 0"
+44,greedy,greedy,36,3,0,39.13,1.621e+04,336.4,287.6,16296,16409,0,0.1903,9.831e+04,False,9.38e+03,True,"(0, -1, 1) releases relative rotation (tilt; rot. weight 0.87) -> 0"
+45,greedy,greedy,35,1,0,7730,2.394e+04,326.4,459.6,24023,24134,0,0.2572,1.022e+05,False,1.29e+04,True,"(0, -1, 0) locks relative rotation+translation (tilt, shear; rot. weight 0.39) -> inf"
+46,greedy,greedy,30,5,0,6485,3.043e+04,491.1,707.5,30494,30591,0,0.2438,9.406e+04,False,7.49e+03,True,"(-1, 0, 0) releases relative rotation+translation (tilt, normal; rot. weight 0.60) -> 0"
+47,greedy,greedy,28,2,0,2.875e+04,5.917e+04,484,1035,59236,59327,0,0.2797,1.134e+05,False,1.79e+04,True,"(0, -1, 0) locks relative rotation+translation (twist, normal; rot. weight 0.60) -> inf"
+48,greedy,greedy,23,5,0,3.764e+04,9.681e+04,765.5,1290,96865,96941,0,0.4092,1.047e+05,False,4.41e+03,True,"(-1, 0, 0) releases relative rotation+translation (tilt, normal; rot. weight 0.76) -> 0"
+49,greedy,greedy,22,1,0,9.218e+04,1.89e+05,1.176e+04,1.09e+05,1.8905e+05,1.8912e+05,0,0.5606,1.759e+05,False,2.97e+03,True,"(-1, 0, -1) locks relative rotation+translation (tilt, normal; rot. weight 0.61) -> inf"
+50,greedy,greedy,20,2,0,8.632e+05,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,0.007394,True,1e+16,True,"(-1, -1, 0) locks relative rotation+translation (twist, shear; rot. weight 0.59) -> inf"
+51,freeze,orientation,19,1,0,1.164e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,0.000281,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+52,freeze,orientation,18,1,0,2.794e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,9.936e-06,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+53,freeze,orientation,17,1,0,2.794e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,1.582e-06,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+54,freeze,orientation,16,1,0,2.794e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,9.51e-07,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+55,freeze,orientation,15,1,0,2.794e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,4.522e-07,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+56,freeze,orientation,14,1,0,2.794e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,1.893e-07,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+57,freeze,orientation,13,1,0,6.519e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,1.411e-07,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+58,freeze,orientation,12,1,0,8.848e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,1.148e-07,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+59,freeze,orientation,11,1,0,8.848e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,9.336e-08,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+60,freeze,orientation,10,1,0,8.848e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,7.574e-08,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+61,freeze,orientation,9,1,0,8.848e-09,1.052e+06,9509,4562,1.0523e+06,1.0523e+06,0,0.9808,6.023e-08,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+62,freeze,orientation,8,1,0,8.848e-09,1.052e+06,9509,4562,1.0522e+06,1.0523e+06,0,0.9808,5.003e-08,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+63,freeze,orientation,7,1,0,8.848e-09,1.052e+06,9509,4562,1.0522e+06,1.0523e+06,0,0.9808,nan,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+64,freeze,orientation,6,1,0,8.848e-09,1.052e+06,9509,4562,1.0522e+06,1.0523e+06,0,0.9808,nan,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+65,freeze,orientation,5,1,0,9.779e-09,1.052e+06,9509,4562,1.0522e+06,1.0523e+06,0,0.9808,nan,True,1e+16,True,orientation direction with g = 0 frozen (not determined by the data)
+66,greedy,greedy,2,3,0,6.264e+04,1.115e+06,1.009e+04,4961,1.1149e+06,1.1149e+06,0,1,8.261e-08,True,nan,True,"(0, 0, -1) releases relative rotation+translation (tilt, shear; rot. weight 0.64) -> 0"
+67,freeze,orientation,1,1,0,-2.328e-10,1.115e+06,1.009e+04,4961,1.1149e+06,1.1149e+06,0,1,8.261e-08,True,nan,True,orientation direction with g = 0 frozen (not determined by the data)
